@@ -13,7 +13,9 @@
  * Base Class       :	NativeMethods
  * ----------------------------------------------------------------------------
  * Tool for Anti Malware:
- * Microsoft Safety Scanner 32/64BIT
+ * Microsoft Safety Scanner 32/64BIT systemtool: 
+ * mrt.exe (is 64BIT App !)
+ * download from Microsoft Download Center
  * 
  * Microsoft Safety Scanner is a scan tool designed to find and 
  * remove malware from Windows computers. 
@@ -262,285 +264,25 @@
 // !------------------------------------------------------------------------------!
 // ! Windows goes open - parts of Windows Operation System with Sourcecodes:      !
 // !------------------------------------------------------------------------------!
-// ! Windows Research Kernel source - Kernel sourcecode parts --------------------!
-// ! wrk_master.zip was only for Students and Insiders ---------------------------!
 // !------------------------------------------------------------------------------!
 // ! Windows 10 Calculator --------------------written in C++ --------------------!
 // ! Windows 10 Terminal&Console 'conhost.exe' written in C++ --------------------!
 // ! WindowsTerminal-master.zip download from GitHub -----------------------------!
 // !
-// !------------------------------------------------------------------------------!
-// ! Microsoft SQL Server 2019 with Apache Spark and HDFS, HADOOP for Big Data.
-// !------------------------------------------------------------------------------!
 
-
-/*--------------------------------------------------------------------------------! 
- * Microsoft Windows Operation System Open Wonder 2019 🖥------------------------!
- *  Windows selbst zu öffnen - Teile Open Source - Microsoft Build 2019 Seattle --!
- *  Windows Operation System goes 👁‍🗨 open source 👁‍🗨 -----------------------------!
- *--------------------------------------------------------------------------------!
- * Als Teil des neue Windows Terminal hat Microsoft die Quelle 
- * für 'conhost.exe' veröffentlicht.
- * Microsoft hat es mit der freizügigen ➡ MIT-Lizenz ⬅ veröffentlicht.
- * dies ist das erste Mal, dass das Unternehmen Core Windows-Quellcode 
- * veröffentlicht hat und mit einer open-Source-Lizenz zu booten.
- * 
- * Das Windows-Terminal-Projekt wird in ähnlicher Weise erlaubt lizenziert. 
- * Während es eine frühe Alpha-Version im Moment, sobald es stabilisiert und
- * verfügt über einen soliden Funktionsumfang gebrandmarkt hat,
- * ist es wahrscheinlich in Windows integriert werden und
- * als ein Standard-Windows-Komponente zu versenden.
- * Genauso wie mit der Veröffentlichung der conhost.exe, 
- * dies etwas ein Novum darstellt: 
- * eine (neue) core Windows-Komponente, die als Open Source entwickelt wird.
- * 
- * Microsoft hat sich geändert.
- * Es ist nicht das Unternehmen, was, das es einmal war.
- * 
- * Open Source ist nicht mehr der Feind — es ist nun etwas,
- * das eine Rolle im gesamten Unternehmen.
- * 
- * Und öffnen Sie Quelle ist nicht nur für diskrete, Standalone-Anwendungen;
- * Es ist jetzt eine praktikable Baustein für Windows Kernfunktionen.
- * 
- * Zurück im Jahr 2015, sagte Mark Russinovich, 
- * Microsoft könnte Open-Source Windows.
- * 
- * Open Source ist jetzt nur ein Teil des Unternehmens-Toolkit,
- * und gibt es wenig offensichtliche Grenze, wo es verwendet werden kann.
- * 
- * In Kürze: 
- * Windows Terminal – endlich ein tabbed, Emoji-fähigen Windows Befehlszeile
- * Große Performance-Verbesserungen für das Linux-Subsystem sind auch auf dem Weg.
- * 
- * Details sind derzeit knapp, aber Microsoft hat angekündigt,
- * einige großen Veränderungen kommen auf die Befehlszeilenschnittstelle.
- * 
- * In Windows 10 hat Microsoft gearbeitet um die Windows Kommandozeile
- * Erfahrung erheblich verbessert, so dass es viel mehr wie 
- * Unix-Kommandozeile Umgebungen zu arbeiten. 
- * 
- * Aber ein paar Probleme warten noch behoben werden: 
- * Menschen wollen Registerkarten in der Befehlszeile, und Unterstützung für Emoji.
- * 
- * Im Juni kommt, das Windows Terminal.
- * Es klingt, als ob Windows Terminal gelingen wird,
- * ersetzen Sie die vorhandene Conhost Konsole
- * (die Windows-Komponente, die zum Zeichnen von Befehlszeilen Fenster zuständig ist)
- * mit seinen begrenzten Funktionsumfangs, um sicherzustellen, 
- * dass die neuen Features etwas zur Verfügung stehen und alles, was der Befehlszeile,
- * einschließlich der traditionellen Windows NT cmd.exe
- * aber auch PowerShell und den Windows-Subsystem für Linux verwendet.
- * 
- * Windows-Subsystem für Linux ist auch in der Linie für einige großen Verbesserungen. 
- * Microsoft will auch im Juni kommen, volle Unterstützung für den Betrieb in Containern
- * Anwendungen Verwendung von Docker auf WSL hinzufügen.
- * 
- * Dies wurde ein Kunstwerk-Kompatibilität dringend gebeten, 
- * die Entwickler in WSL haben wollte.
- * 
- * Microsoft plant auch, eine langjährige Beschwerde über WSL anzugehen: 
- * die Datei-System-Performance ist sehr langsam, dauert viel länger erstellen,
- * aufzulisten und zu zerstören, Dateien und Ordner als eine vergleichbare Linuxmaschine.
- * 
- * Einige dieser Probleme sind wahrscheinlich auf das NTFS-Dateisystem
- * seine Leistung in diesen Bereichen hat lange zurückblieben,
- * die Linux-Dateisysteme – aber ein großer Teil der Gemeinkosten zu WSL selbst zu sein scheint. 
- * 
- * Die Verbesserungen, die Microsoft unternimmt sollte mindestens 
- * die doppelte Leistung dieser Datei-System-Operationen.
- * Mit Microsoft SQL Server 2019 kommen HDFS und Apache SPARK - PolyBase Tables to other DB's...
- * Auch können Spark Jobs ausgeführt werden.
- * 
- * Microsoft Open Quellen ein großes Stück von.NET
- * Neugründung der.NET regelt eine Vielzahl von Komponenten.
- * 
- * SAN FRANCISCO – auf seiner Entwicklerkonferenz Build heute Microsoft angekündigt,
- * dass es offen sei, Beschaffung einer Vielzahl seiner .NET Bibliotheken und 
- * verwandte Technologien und eine Gruppe, die.NET-Stiftung, um die Entwicklung und 
- * Führung der open-Source zu beaufsichtigen Komponenten.
- * 
- * Vielleicht war das Highlight der Ankündigung heute, dass das Unternehmen seine 
- * Roslyn Compiler Stack als open Source unter der Apache 2.0 Lizenz veröffentlichen wird.
- * 
- * Roslyn beinhaltet einen c# und Visual Basic.NET Compiler 
- * bietet nennt Microsoft einen "Compiler as a Service."
- * 
- * Viele – wenn auch nicht alle-Compiler arbeiten im Wesentlichen als Black Boxes.
- * Sie schlürfen in Source-Code auf der Vorderseite und speien, 
- * ausführbaren Code auf der Rückseite.
- * Mit Roslyn unternimmt Microsoft einen anderen Ansatz.
- * 
- * Der Roslyn-Compiler kann als eine Bibliothek verwendet werden.
- * Wenn es ein Stück Quellcode liest, erzeugt es eine interne Repräsentation, 
- * die Drittanbieter-Code dann manipulieren und untersuchen können.
- * 
- * Dies ermöglicht Roslyn als, zum Beispiel verwendet werden, einen Motor, 
- * die Code Vervollständigung Funktionen in einer integrierten Entwicklungsumgebung zu fahren.
- * 
- * Die.NET-Stiftung (.NET Foundation) gehören Vertreter aus, unter anderem Microsoft, 
- * GitHub und Xamarin.Xamarin, die produziert Werkzeuge um Entwicklern ermöglichen, 
- * iOS- und Android-apps mit .NET und Visual Studio zu erstellen, 
- * hat einige der Bibliotheken an die Stiftung im Rahmen der laufenden 
- * Zusammenarbeit zwischen den beiden Unternehmen beigetragen.
- * 
- * Wir sprachen mit Xamarin CTO Miguel de Icaza über die Zusammenarbeit 
- * mit Microsoft und die Entscheidung für diese open-Source-Komponenten.
- * 
- * Für eine lange Zeit, sagte er, während die Ingenieure bei den beiden 
- * Unternehmen ein gutes Verhältnis hatte, die Entscheidungen, die Microsoft-wie nicht erlauben, 
- * bestimmte Teile des Codes auf 
- * nicht-Windows-Plattformen verwendet werden – die Dinge schwierig für Xamarin.
- * 
- * Aber das änderte sich Ende letzten Jahres mit Microsofts Schwerpunkt verlagert, 
- * wo, wohl, es immer hätte sein müssen: das beste für seine Kunden tut. 
- * 
- * Im November letzten Jahreskündigte die Unternehmen, 
- * dass sie auf eine Partnerschaft wurden um Xamarin Tools verwenden, 
- * um Code zu schreiben, die auf Microsoft und nicht-Microsoft-Plattformen zu erleichtern.
- * 
- * Dieser neue Microsoft hat nicht nur entfernt die problematischeren Beschränkungen 
- * ihrer Lizenzen aber auch arbeitete mit Xamarin um Design Feedback und Dokumentation 
- * unter einer Creative Commons-Lizenz veröffentlicht, so dass er verteilt werden kann. 
- * Redmond gab auch Xamarin seine internen .NET-Test-Suite, 
- * so dass Xamarin seinen Code mit Microsofts Tests überprüfen könnte.
- * 
- * Die.NET Stiftung und open Source Software, wie z. B. Roslyn ist der nächste Schritt 
- * in der Entwicklung dieses neuen, offenen Microsoft. 
- * Roslyn finalisiert wird stabil und Xamarin es in seine eigenen Werkzeuge zu integrieren.
- * 
- * Open Source Windows is “definitely possible”, but don’t hold your breath
- * CTO Azure and Windows Mark Russinovich tells conference audience that it's a "new Microsoft."
- * 
- * Microsoft veröffentlicht Windows als open-Source ist nicht unmöglich,
- * hörte das Publikum auf der ChefConf Konferenz am Mittwoch.
- * 
- * Mark Russinovich, Microsoft Technische Fellow und Azure CTO war Teil einer Podiumsdiskussion,
- * die "Ihre Wetten auf öffnen sich gelohnt haben?" fragte:
- * Für die längste Zeit hat Microsoft gesehen, wie ein Feind aller Dinge zu öffnen,
- * mit ehemaligen CEO Steve Ballmer berühmt beschreiben Linux als "Krebs" 
- * in einem 2001 Interview mit der Chicago Sun-Times.
- * 
- * Aber Einstellungen und Meinungen haben sich im Laufe der Jahre verschoben.
- * Wie Russinovich das Publikum gesagt, fast alle Unternehmen heutzutage hängen 
- * zumindest einige open-Source-Software, und das schließt Microsoft-Kunden.
- * 
- * Dies hat das Unternehmen gezwungen, Warm, und Unterstützung, open-Source-Software – Zeuge 
- * die Proklamation von CEO Satya Nadella im Oktober letzten Jahres, dass "Microsoft Linux liebt."
- * 
- * Unterstützung von open-Source-Software ist wertvoll, aber tiefer, und noch wichtiger, 
- * ist der Einsatz von open-Source-ideale.Entwickler, kommen vor allem Offenheit in der Entwicklung zu erwarten. 
- * Dieser Einfluss hat Microsoft Dinge tun, die früher undenkbar galt möglicherweise gesehen; 
- * nach frühen Pionierleistungen, wie die open Source des ASP.NET Frameworks das Unternehmen 
- * hat offene Quellen große Teile von.NET Framework und Öffnen Hardware Projekte teilgenommen.
- * 
- * Russinovich beschreibt die Entscheidung .NET als Weise des zunehmenden Interesses an und Nutzung 
- * von Microsofts kostenpflichtigen Software öffnen. Offene.NET ist "eine Technologie, 
- * die Menschen begannen zu anderen Microsoft-Lösungen erhalten können", sagte er der Konferenz weiter 
- * "Es hebt sie hoch und macht sie zugänglich für unsere anderen Angebote, wo sonst sie nicht sein könnte."
- * 
- * Es ist vor diesem Hintergrund, dass Russinovich behauptete, dass es "definitiv möglich" sei, 
- * dass Microsoft würde, eines Tages, Quellcodefenster öffnen, sagen, dass "jedes Gespräch Sie sich vorstellen können, 
- * was sollten wir tun, mit unserer Software – im Vergleich zu nicht-offenen im Vergleich zu öffnen Dienstleistungen — geschehen. "
- * Freigabe von Windows als open Source wäre keine geringe Leistung. 
- * 
- * Die Windows-Quelle ist nicht einfach herunterladen und kompilieren ordentlich verpackt.
- * 
- * "Wenn Sie-Source etwas Open, aber es mit einem Build-System, die Raketenwissenschaftler 
- * und drei Monate kommt einzurichten dauert, was ist der Punkt?" Russinovich fragte rhetorisch.
- * 
- * Technische Komplexität beiseite, wir kämpfen, um Microsoft Windows die Freigabe als open Source jederzeit bald zu sehen. 
- * Selbst als seinen Einfluss angesichts des Mobile-orientierte Konkurrenten schwindet, 
- * Windows bleibt ein riesiges Unternehmen mit hoher Liquiditätsreserve für Redmond – eine, 
- * die es voraussichtlich nicht aufgeben wollen. Aber das bedeutet nicht, dass das Unternehmen 
- * keine weiteren open-Source-Ambitionen hat. Wir konnten auch glauben, dass eine schrittweise Öffnung 
- * bestimmter Teile der Windows-Plattform in den nächsten Jahren auftreten.
- * 
- * Zum Beispiel konnten wir eine Fortsetzung des Open-Source des Stapels.NET sehen. 
- * Microsoft ist derzeit nur in den Prozess der Veröffentlichung der Serverplattform. 
- * Dies beinhaltet alle Kern .NET Framework-Komponenten, das Laufzeitmodul und Compiler, 
- * aber es nicht Desktop/Client-Komponenten wie die WPF-Bibliothek zum Erstellen 
- * von grafischen Benutzeroberflächen verwendet.
- * 
- * Hinzufügen von Portionen, wie dies dem geöffneten Projekt wahrscheinlich von der Gemeinschaft begrüßt werden würde
- * öffnen die Tür zu einer schnelleren Entwicklung und höhere Reaktionsfähigkeit auf Entwickler Feedback
- * während Windows als Geld-Maker nicht zu gefährden.
- * 
- * Ebenso haben wir argumentiert, dass Internet Explorer zu öffnen– oder insbesondere die neuen Edge-Modul, 
- * das in den Project Spartan Browser geht – ist das richtige zu tun.
- * 
- * In gewisser Weise gibt es Parallelen zwischen dem Fall dies zu tun und Russinovichs Erklärung.NET zu öffnen.
- * Während wir einen Kante-basierten Browser zu je einem Vorzeigeclub auf anderen Plattformen nicht erwarten würde, 
- * Öffnung und die Möglichkeit der Verwendung und Erprobung Rand auf nicht-Windows-Systeme zu schaffen wäre auch eine "Technologie" Art, 
- * Devs sicherstellen zu helfen ihre Software aussieht und funktioniert einwandfrei in Microsofts Browser. 
- * 
- * Dies sollte besonders wertvoll sein, angesichts der Microsoft Webapps verwenden, 
- * füllen Sie die app-Lücke in Windows 10 helfen will.
- * 
- * Obwohl ein solcher Schritt wäre nicht als headline als sourcing Fenster greifen, 
- * wäre es viel einfacher, mit Microsofts geschäftlichen Anforderungen in Einklang zu bringen.
- * Russinovich sagen, dass es eine "neue Microsoft", und es gut, mehr offen, offen als je zuvor sein kann, 
- * aber das macht keinen praktischen Bedürfnisse verschwinden.
- * Selektive, gezielte Offenheit scheint viel eher Weg
- * 
-*/
-// !
-// !------------------------------------------------------------------------------!
-// ! Windows Research Kernel sourcecode written in C.
-// !------------------------------------------------------------------------------!
-// ! Only Part Kernel Files.
-// ! 
-// !
-// !------------------------------------------------------------------------------!
-// ! TIPPO make changes, about new SDK's, new Visual Studio change the options.
-// ! now new SDK 17134 (actual SDK 17738 Preview for 1809) and 
-// ! Visual Studio 2017 V 15.8.0
-// ! Windows 10 come with new .NET Framework (dependency) and ucrt140.dll as
-// ! C++ Runtime Library for Windows 10, is the System-Component.
-// ! ucrt140.dll - SDK: C++ Headerfiles and source. universal c runtime library
-// ! Programming with/without Headerfiles now with Visual C++:
-// ! Visual C++ native - unmanaged Code
-// ! Visual C++ .NET   - managed code with /clr
-// ! mixed
-// ! Visual C++.NET without Headerfiles, can use now the [DLLImportAttribute]
-// ! System-Libraries, foreign Libraries, 
-// ! Apple System Libraries: libc.so
-// ! Android System Libraries: libc.dll and libc64.dll as runtimes
-// ! (Google make Documentation what's Android Device, so must be both libraries
-// ! on the Android Device, fault one is NOT Google Android Device!)
-// ! At Windows 10 vNext some API's obsolete, not continue supported.
-// ! See in our Documentation: Word .docx - TIPPO Reference List under 
-// ! Windows Operation Systam Index - all API's.
-// ! Windows 10 goes AI and Machine Learning, Cloud, Web...
-// !
-// ! Windows 10 - 2020 open Branch 20H1 with Build 18836
-// !------------------------------------------------------------------------------!
 
 /**************************************************************************************************
-        Windows 10 Professional as Multi-User System - May Update 2019 - OS Build 18362 is fix !
-        Only the Revisions increment by Microsoft after cleanup's Bugs. at time Revision .86
-        One or more Users on a one Computer. 
-        -------------------------------------------------------------------------------------------
+ Windows 10 Professional as Multi-User System. 
+ One or more Users on a one Computer. 
+ admin Systemtool: netplwiz.exe - network policy wizard
+ Only the Revisions increment by Microsoft after cleanup's Bugs.
+ -------------------------------------------------------------------------------------------
         (User Database: Windows Internal Database 'RESENT' max. Size 16 Tebibytes (Terabyte) ->
         Tebibytes is the correctness Tera Binary Bytes ! Tebibyte and other come from 
         International Bureau of Measures and Weights in Paris. (see table bytes)
         Yotta Bytes is different to Yobibytes - Yotta binary bytes different in 20.9% 
-        -------------------------------------------------------------------------------------------
-        New International SI Unit's at 20.05.2019 for all Countries of World.
-        Good Bye Base Units, good morning natural constants !
-        
-        Ampere, Mol, Kelvin, Meter, Candela, Second, Kilogram - new defintions.
-
-        Test with the ground kilogram the old is incorrect now!.
-        -------------------------------------------------------------------------------------------
-        Germany: 
-        PTB Braunschweig/Berlin Website - Dipl. ing. Gutbrod have written PTB-Clock for use in JS
-        new Version with Speech Time hour and seconds, 
-        for local time he show differents in milliseconds +- ms, The local time 1 second different,
-        new Windows 10 OS-Build 18362 have an Timeserver, click the Button make syncronization.
-        -------------------------------------------------------------------------------------------
-
-        -------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------
         (Admin can add Users and Rights or Account Operator)
         -------------------------------------------------------------------------------------------
         Username              SID
@@ -562,25 +304,6 @@
         Password
         PIN
         
-        Iris scanner ? Microsoft out!
-        (Microsoft Company Entry have a Card Reader (Chip) at Door after an
-        Handkey System must be your Hand into Hand-stencil and scan the Hand.)
-        Google Data Center entry with Card Reader (Door Security Man with Weapon),
-        after Work and go out have Garrett Curve and on band scan handbag.
-
-        Windows 10 - 2019 -
-        NEW ! Picture Password
-        NEW ! Security Key
-
-        Eye Control - eye control for paralyzed people must be an Device!
-        steering the Windows Operation System.
-
-        Windows 10 provides administrator and super administrator with full rights to the computer:
-        otherwise user / user does not notice the full rights, therefore locks
-        Windows 10 some folders.
-
-        -------------------------------------------------------------------------------------------
-
         ===========================================================================================
         Windows 10 Operation System have internal Database 'Resent'! : (start by Windows 2000)
         ===========================================================================================
@@ -590,186 +313,7 @@
         have Table inside what they means.
         
         Differents by Sizes ! - Yotta Bytes to Yotta Binary Bytes different by 20.9 %)
-        https://docs.microsoft.com/de-de/windows/win32/extensible-storage-engine/extensible-storage-engine-reference
-
-        -------------------------------------------------------------------------------------------
-        (Internal Database Codename 'Yukon' - MS SQL Server Embedded Edition )
-        (The big Brother MS SQL Server DB 2017 max. DB-Size Limit 524 Terabyte!)
-
-        - make logs in Event System by app starts success and failure.
-        - NEW Event System tab show view and tab show XML struct
-        - Microsoft-Windows 10 - Windows Firewall With Advanced Security
-        - recovered file fragments - edb.chk
-        - edb.db - database file,
-        - edbtmp.log - text document temporary.
-        - Windows 10 Database Resent logging into:
-        - C:\WINDOWS\system32\config\systemprofile\AppData\Local\TileDataLayer\Database\EDB.log
-        -------------------------------------------------------------------------------------------
-        Instance name is 'JET' is RESENT-Engine. (NOT old Jet Engine by Access!)
-        ESENT make automatic logs, check Cache-Size, recovery options by errors.
-        ESENT direct use witn C++ or Managed ESENT for .NET -
-        -------------------------------------------------------------------------------------------
-        Internal Windows-Database Resent Save Datas:
-        -------------------------------------------------------------------------------------------
-        Active Directory-Rightssystem Service
-        Windows-Systemresource-Manager
-        UDDI-Dienste
-        Active Directory-Verbunddienste 2.0, 
-        IPAM [2] und Windows SharePoint Services.
-        (HIDDEN)
-        C:\Windows\sysmsi\ssee\
-                TIPPONOTE: is that's the User Database??? One User or more on one Computer.
-        -------------------------------------------------------------------------------------------
-        .NET and Visual C# have NO fixed string max. size id integer value 2.147.000
-        You want fixed string use this Attribute:
-        [MarshalAs(UnmanagedType., SizeConst=128)]
-        string name;
-        -------------------------------------------------------------------------------------------
-
-        -------------------------------------------------------------------------------------------
-        
-        ===========================================================================================
-        New Event-Viewer in Windows 10 May Update - OS-Build 18362:
-        have an copy ▶button◀ by view window, and XML show.
-        ===========================================================================================
-        
-        sample category Security Logs
-
-        Kategorie Sicherheit:
-        
-        Protokollname: System
-        Quelle:        Microsoft-Windows-Windows Firewall With Advanced Security
-        Datum:         14.05.2019 17:56:09
-        Ereignis-ID:   2042
-        Aufgabenkategorie:Keine
-        Ebene:         Fehler
-        Schlüsselwörter:
-        Benutzer:      Lokaler Dienst
-        Computer:      DESKTOP-MNK3MVK
-        Beschreibung:
-        Config Read-Fehler
-
-        Config:	Autorisierungsliste für Remotebenutzer
-        Fehler:	Falscher Parameter.
-        Ereignis-XML:
-        <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
-          <System>
-            <Provider Name="Microsoft-Windows-Windows Firewall With Advanced Security" Guid="{d1bc9aff-2abf-4d71-9146-ecb2a986eb85}" />
-            <EventID>2042</EventID>
-            <Version>0</Version>
-            <Level>2</Level>
-            <Task>0</Task>
-            <Opcode>0</Opcode>
-            <Keywords>0x200000000000000</Keywords>
-            <TimeCreated SystemTime="2019-05-14T15:56:09.606663900Z" />
-            <EventRecordID>15022</EventRecordID>
-            <Correlation />
-            <Execution ProcessID="3596" ThreadID="4476" />
-            <Channel>System</Channel>
-            <Computer>DESKTOP-MNK3MVK</Computer>
-            <Security UserID="S-1-5-19" />
-          </System>
-          <EventData>
-            <Data Name="SettingType">13</Data>
-            <Data Name="ErrorCode">-2147024809</Data>
-          </EventData>
-        </Event>
-
-        ---------------------------------------------------------------------------------------
-        Da Windows 10 Professional ein Multi User System ist und als Workstation ausgelegt ist.
-        ---------------------------------------------------------------------------------------
-        Ein Benutzer oder mehrere Benutzer auf einen Computer/PC
-        
-        Achtung nur der Administrator/Account Operator kann Benutzer erstellen.
-        Windows 10 Professional hat einen Benutzer/Gruppen Manager,
-        > netplwiz.exe ist der Network Policy Wizard
-        
-        Tippo Tip: Windows 10 and Windows Server have the same Codebase,
-        so Windows 10 Professional have many Network Libraries, connection to Server:
-        WinSat.dll,
-        But NOTE ! purchase an License for Windows 10 is the CAL= Client Access License for
-        Server. If 'NOT' the Systenm check the License internal in WinSat: OpenLicenseServer
-        Windows Server 2019 Essential coast 400 € - 25 Users and 50 Devices.
-        ---------------------------------------------------------------------------------------
-        2020 - Microsoft Bombs:
-        .NET 5 one Platform for all.
-        ---------------------------------------------------------------------------------------
-
-        Aufgabenkategorie:
-        User Account Management
-        
-        Teil Commputername
-        <Computer>DESKTOP-MNK3MVK</Computer>
-        Kontodomäne:		WORKGROUP
-        
-        Unix befehl: whoami
-        commputername\benutzername
-        desktop-mnk3mvk\tippo
-        
-        Protokollname: Security
-        Quelle:        Microsoft-Windows-Security-Auditing
-        Datum:         14.05.2019 18:49:45
-        Ereignis-ID:   4798
-        Aufgabenkategorie:User Account Management
-        Ebene:         Informationen
-        Schlüsselwörter:Überwachung erfolgreich
-        Benutzer:      Nicht zutreffend
-        Computer:      DESKTOP-MNK3MVK
-        Beschreibung:
-        Die lokale Gruppenmitgliedschaft eines Benutzers wurde aufgezählt.
-        ------------------------------------------------------------------
-        Antragsteller:
-	        Sicherheits-ID:		SYSTEM
-	        Kontoname:		DESKTOP-MNK3MVK$
-	        Kontodomäne:		WORKGROUP
-	        Anmelde-ID:		0x3E7
-
-        Benutzer:
-	        Sicherheits-ID:		DESKTOP-MNK3MVK\WDAGUtilityAccount
-	        Kontoname:		WDAGUtilityAccount
-	        Kontodomäne:		DESKTOP-MNK3MVK
-
-        Prozessinformationen:
-	        Prozess-ID:		0xfdc
-	        Prozessname:		C:\Windows\System32\wbem\WmiPrvSE.exe
-        Ereignis-XML:
-        <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
-          <System>
-            <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
-            <EventID>4798</EventID>
-            <Version>0</Version>
-            <Level>0</Level>
-            <Task>13824</Task>
-            <Opcode>0</Opcode>
-            <Keywords>0x8020000000000000</Keywords>
-            <TimeCreated SystemTime="2019-05-14T16:49:45.654724000Z" />
-            <EventRecordID>12040292</EventRecordID>
-            <Correlation ActivityID="{7a6add08-0a6d-0002-e2de-6a7a6d0ad501}" />
-            <Execution ProcessID="864" ThreadID="940" />
-            <Channel>Security</Channel>
-            <Computer>DESKTOP-MNK3MVK</Computer>
-            <Security />
-          </System>
-          <EventData>
-            <Data Name="TargetUserName">WDAGUtilityAccount</Data>
-            <Data Name="TargetDomainName">DESKTOP-MNK3MVK</Data>
-            <Data Name="TargetSid">S-1-5-21-3373537164-1258717689-2658483839-504</Data>
-            <Data Name="SubjectUserSid">S-1-5-18</Data>
-            <Data Name="SubjectUserName">DESKTOP-MNK3MVK$</Data>
-            <Data Name="SubjectDomainName">WORKGROUP</Data>
-            <Data Name="SubjectLogonId">0x3e7</Data>
-            <Data Name="CallerProcessId">0xfdc</Data>
-            <Data Name="CallerProcessName">C:\Windows\System32\wbem\WmiPrvSE.exe</Data>
-          </EventData>
-        </Event>
-        -------------------------------------------------------------------------------------------
-        Windows 10 tricky is move oover windows flag - main - 
-        click right mouse have an Window with much SystemTools
-        -------------------------------------------------------------------------------------------
-
-
-
-        
+        https://docs.microsoft.com/de-de/windows/win32/extensible-storage-engine/extensible-storage-engine-reference    
  */
 
 
@@ -1459,7 +1003,7 @@ namespace Visual.Operation.System.Native
 
 
         // ATTENTION ! by Drag and Drop !
-        // 260 chars minus 1 is the Limit by Filename
+        // 260 chars minus 1 is the Limit by Filename -1 for anti overflow
         // 248 chars minus 1 is the Limit by Pathname
         //
         // From Windows Explorer drag and drop into Visual Studio Project-Solution !
