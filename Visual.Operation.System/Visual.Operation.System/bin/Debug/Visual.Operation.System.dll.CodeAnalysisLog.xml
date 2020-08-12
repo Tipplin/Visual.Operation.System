@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\Tippo\Software Creative Production\Visual.Operation.System\Visual.Operation.System\bin\Debug\Visual.Operation.System.dll">
+   <Modules>
+    <Module Name="visual.operation.system.dll">
+     <Namespaces>
+      <Namespace Name="Visual.Operation.System">
+       <Types>
+        <Type Name="SafeNativeMethods" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#GetKeyState(System.Int32)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="0" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2018-10-31 18:20:54Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error">Wie im Code deklariert, ist der 'virtualKeyCode'-Parameter von P/Invoke 'SafeNativeMethods.GetKeyState(int)' auf 64-Bit-Plattformen 4 Bytes breit. Dies stellt einen Fehler dar, da in der eigentlichen nativen Deklaration dieser API für 64-Bit-Plattformen eine Sollbreite von 8 Bytes angegeben ist. In der MSDN-Dokumentation zum Plattform-SDK finden Sie Informationen zur Bestimmung des Datentyps, den Sie anstatt 'int' verwenden sollten.</Issue>
+            </Message>
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2018-10-31 18:20:54Z" FixCategory="NonBreaking">
+             <Issue Name="Return" Certainty="95" Level="Error">Wie im Code deklariert, ist der Rückgabetyp von P/Invoke 'SafeNativeMethods.GetKeyState(int)' auf 32-Bit-Plattformen 2 Bytes breit. Dies stellt einen Fehler dar, da in der eigentlichen nativen Deklaration dieser API für 32-Bit-Plattformen eine Sollbreite von 4 Bytes angegeben ist. In der MSDN-Dokumentation zum Plattform-SDK finden Sie Informationen zur Bestimmung des Datentyps, den Sie anstatt 'short' verwenden sollten.</Issue>
+             <Issue Name="Return" Certainty="95" Level="Error">Wie im Code deklariert, ist der Rückgabetyp von P/Invoke 'SafeNativeMethods.GetKeyState(int)' auf 64-Bit-Plattformen 2 Bytes breit. Dies stellt einen Fehler dar, da in der eigentlichen nativen Deklaration dieser API für 64-Bit-Plattformen eine Sollbreite von 4 Bytes angegeben ist. In der MSDN-Dokumentation zum Plattform-SDK finden Sie Informationen zur Bestimmung des Datentyps, den Sie anstatt 'short' verwenden sollten.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetProcAdress(System.IntPtr,System.String)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2018-10-31 18:20:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">Korrigieren Sie die Deklaration von 'SafeNativeMethods.GetProcAdress(IntPtr, string)' so, dass sie korrekt auf einen vorhandenen Einstiegspunkt in 'kernel32.dll' zeigt. Der Name des derzeit verknüpften, nicht verwalteten Einstiegspunkts lautet GetProcAdress.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUserNameEx(System.Int32,System.Text.StringBuilder,System.UInt64)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2018-10-31 18:20:54Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Error">Wie im Code deklariert, ist der 'domainNameLen'-Parameter von P/Invoke 'SafeNativeMethods.GetUserNameEx(int, StringBuilder, ulong)' auf 32-Bit-Plattformen 8 Bytes breit. Dies stellt einen Fehler dar, da in der eigentlichen nativen Deklaration dieser API für 32-Bit-Plattformen eine Sollbreite von 4 Bytes angegeben ist. In der MSDN-Dokumentation zum Plattform-SDK finden Sie Informationen zur Bestimmung des Datentyps, den Sie anstatt 'ulong' verwenden sollten.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUserNameEx2(System.Int32,System.Text.StringBuilder,System.Int64)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2018-10-31 18:20:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">Korrigieren Sie die Deklaration von 'SafeNativeMethods.GetUserNameEx2(int, StringBuilder, long)' so, dass sie korrekt auf einen vorhandenen Einstiegspunkt in 'secur32.dll' zeigt. Der Name des derzeit verknüpften, nicht verwalteten Einstiegspunkts lautet GetUserNameEx2.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RegConnectRegistry(System.String,System.Runtime.InteropServices.SafeHandle,System.Runtime.InteropServices.SafeHandle&amp;)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2018-10-31 18:20:54Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">Um Sicherheitsrisiken zu verringern, marshallen Sie den 'machineName'-Parameter als Unicode, indem Sie DllImport.CharSet auf CharSet.Unicode festlegen oder den Parameter explizit als UnmanagedType.LPWStr marshallen. Wenn Sie diese Zeichenfolge als ANSI oder systemabhängig marshallen müssen, legen Sie "BestFitMapping=false" fest. Legen Sie zur Erhöhung der Sicherheit auch "ThrowOnUnmappableChar=true" fest.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SHGetFolderPath(System.IntPtr,System.Int32,System.IntPtr,System.Int32,System.Text.StringBuilder)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="4" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2018-10-31 18:20:54Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">Um Sicherheitsrisiken zu verringern, marshallen Sie den 'lpszPath'-Parameter als Unicode, indem Sie DllImport.CharSet auf CharSet.Unicode festlegen oder den Parameter explizit als UnmanagedType.LPWStr marshallen. Wenn Sie diese Zeichenfolge als ANSI oder systemabhängig marshallen müssen, legen Sie "BestFitMapping=false" fest. Legen Sie zur Erhöhung der Sicherheit auch "ThrowOnUnmappableChar=true" fest.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901">
+   <Name>Deklarationen von P/Invoke müssen portabel sein.</Name>
+   <Description>.</Description>
+   <Resolution Name="Parameter">Wie im Code deklariert, ist der {0}-Parameter von P/Invoke {1} auf {3}-Plattformen {2} Bytes breit. Dies stellt einen Fehler dar, da in der eigentlichen nativen Deklaration dieser API für {3}-Plattformen eine Sollbreite von {4} Bytes angegeben ist. In der MSDN-Dokumentation zum Plattform-SDK finden Sie Informationen zur Bestimmung des Datentyps, den Sie anstatt {5} verwenden sollten.</Resolution>
+   <Resolution Name="Return">Wie im Code deklariert, ist der Rückgabetyp von P/Invoke {0} auf {2}-Plattformen {1} Bytes breit. Dies stellt einen Fehler dar, da in der eigentlichen nativen Deklaration dieser API für {2}-Plattformen eine Sollbreite von {3} Bytes angegeben ist. In der MSDN-Dokumentation zum Plattform-SDK finden Sie Informationen zur Bestimmung des Datentyps, den Sie anstatt {4} verwenden sollten.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182284(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="portabilityrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400">
+   <Name>Für P/Invoke müssen Einstiegspunkte vorhanden sein.</Name>
+   <Description>Methoden mit dem DllImport-Attribut müssen auf vorhandene, nicht verwaltete Einstiegspunkte zeigen. Es ist keine Kompilierzeitüberprüfung vorhanden, durch die sichergestellt wird, dass Methoden mit dem DllImport-Attribut tatsächlich in der nicht verwalteten DLL vorhanden sind, auf die verwiesen wird. Im Fall, dass ein Einstiegspunkt nicht vorhanden ist oder die angegebene Argumentliste nicht korrekt ist, wird eine Laufzeitausnahme generiert.</Description>
+   <Resolution Name="Default">Korrigieren Sie die Deklaration von {0} so, dass sie korrekt auf einen vorhandenen Einstiegspunkt in {1} zeigt. Der Name des derzeit verknüpften, nicht verwalteten Einstiegspunkts lautet {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182208.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">CriticalWarning</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101">
+   <Name>Marshalling für P/Invoke-Zeichenfolgenargumente festlegen</Name>
+   <Description>Beim Marshallen von Zeichenfolgen als ANSI (oder unter Win9x als Auto) werden einige Zeichen möglicherweise geändert. Wenn die optimierte Zuordnung aktiviert ist, werden Zeichenfolgen, die in Unicode anders angezeigt werden, zu identischen ANSI-Zeichenfolgen gemarshallt. Dies kann zu falschen Sicherheitsentscheidungen führen. Durch Deaktivieren der optimierten Zuordnung können Sie dieses Risiko verringern, da alle Zeichen ohne Entsprechungen "?" zugeordnet werden. "CharSet.Ansi" bildet zudem die Standardeinstellung für alle Marshallvorgänge von Zeichenfolgen. Das Marshallen von Unicode muss explizit festgelegt werden, entweder als CharSet-Einstellung von DllImport oder StructLayout oder als MarshalAs-Attribut mit einem systemabhängigen UnmanagedType bzw. einem für Unicode.</Description>
+   <Resolution Name="Parameter">Um Sicherheitsrisiken zu verringern, marshallen Sie den {0}-Parameter als Unicode, indem Sie DllImport.CharSet auf CharSet.Unicode festlegen oder den Parameter explizit als UnmanagedType.LPWStr marshallen. Wenn Sie diese Zeichenfolge als ANSI oder systemabhängig marshallen müssen, legen Sie "BestFitMapping=false" fest. Legen Sie zur Erhöhung der Sicherheit auch "ThrowOnUnmappableChar=true" fest.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182319.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Kategorie</String>
+  <String Key="Certainty">Sicherheit</String>
+  <String Key="CollapseAll">Alle zuklappen</String>
+  <String Key="CheckId">Prüf-ID</String>
+  <String Key="Error">Fehler</String>
+  <String Key="Errors">Fehler</String>
+  <String Key="ExpandAll">Alle aufklappen</String>
+  <String Key="Help">Hilfe</String>
+  <String Key="Line">Zeile</String>
+  <String Key="Messages">Meldung(en)</String>
+  <String Key="LocationNotStoredInPdb">[Nicht in PDB gespeicherter Speicherort]</String>
+  <String Key="Project">Projekt</String>
+  <String Key="Resolution">Auflösung</String>
+  <String Key="Rule">Regel</String>
+  <String Key="RuleFile">Regeldatei</String>
+  <String Key="RuleDescription">Regelbeschreibung</String>
+  <String Key="Source">Quelle</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Ziel</String>
+  <String Key="Warning">Warnung</String>
+  <String Key="Warnings">Warnung(en)</String>
+  <String Key="ReportTitle">Codeanalysebericht</String>
+ </Localized>
+</FxCopReport>
