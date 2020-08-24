@@ -1,198 +1,262 @@
-﻿/*#############################################################################
+﻿
+//#############################################################################
+//
+// Project			:	Visual.Galaxy.Framework
+//
+//#############################################################################
+//
+//-----------------------------------------------------------------------------
+// Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
+//-----------------------------------------------------------------------------
+// Part				:	VGF.Application
+//-----------------------------------------------------------------------------
+// Base Class       :	
+//-----------------------------------------------------------------------------
+// Copyright © 2020
+// by  Visual Galaxy Framework Community Kernel Developer Team.
+//-----------------------------------------------------------------------------
+// by Head-Author: Christian "TIPPO" Kurs - Visual C# Developer
+// Portions Copyright © 1982 - 2020 by Microsoft Corporation GmbH.
+//-----------------------------------------------------------------------------
+//
+// For same secured Assemblies set inside internal for class, Methods...
+// for use in Visual Galaxy Framework, 
+// give free with:
+//
+// [InternalsVisibleAttribute("Visual.Galaxy.Framework", 
+// AllInternalsVisible = true)]
+//
+// ============================================================================
+// Warning:  
+// ============================================================================
+// This product is licensed to you pursuant to the terms of the 
+// VGF license agreement included with the original software, and is
+// protected by copyright law and international treaties.Unauthorized
+// reproduction or distribution may result in severe civil and criminal
+// penalties, and will be prosecuted to the maximum extent possible under
+// the law.
+// You cannot distribute a compiled version 
+// of this code without prior registration.
+//
+// Please see the documentation supplied with
+// the VGF Libraries for further details.
+//
+// Authored by 
+// Copyright © 2020
+// by  Visual Galaxy Framework Community Kernel Developer Team.
+// all rights reserved.
+// May be redistributed for free,
+// but may not be sold without the author's explicit permission
+//
+// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
+// You may only use this software if you are an authorized licensee
+// of an VGF developer tools product.
+//
+// This software is considered a Redistributable as defined under
+// the software license agreement that comes with the VGF Products
+// and is subject to that software license agreement.
+//
+//-----------------------------------------------------------------------------
+// Microsoft make Restrictions of Export for following Countries:
+// ----------------------------------------------------------------------------
+// This software is subject to the U.S. Export Administration Regulations and 
+// other U.S.law, and may not be exported or re-exported to certain countries
+// (Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) or
+// to persons or entities prohibited from receiving U.S.exports
+// (including Denied Parties, Specially Designated Nationals,
+// and entities on the Bureau of Export Administration Entity List or
+//involved with missile technology or nuclear, chemical or biological weapons).
+//
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
+//-----------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------
+// VFGCore
+// written by 		
+//						Christian "TIPPO" Kurs
+//						Ahornweg 1
+//				  -G -  53177 Bonn
+//						Germany - Allemagne - Duitsland
+//-----------------------------------------------------------------------------
+// 				    voice               :	  
+//					international phone :	
+//					Skype               :
+//					e-mail				:	kurschristian.Kurs@gmail.com
+//					community Website	:	
+//										
+//-----------------------------------------------------------------------------
+// This software is supplied as is. Use it at your own  RISK !!!!.
+// Obviously I've tried to do the best job possible.
+// If you find any problem with it, let me know.
+//
+// With any luck, Visual Galaxy Framework will make it obsolete anyway
+//----------------------------------------------------------------------------
+// License:	
+//				NO fee for NON-Commercial use.
+//				our Community Website:
+// 
+//						
+//
+//				Honest Business Users, to use our compiled Versions, 
+//				please call us to send you our Business Licenses.
+//				or our Business Website:
+//				
+//
+//-----------------------------------------------------------------------------
+
+/*********************** Developer Disclaimer *********************************
+ *
+ * Copyright © 2020 by Christian 'TIPPO' Kurs - Germany
  * 
- * Project			:	Visual.Operation.System
+ ******************************************************************************
  * 
- * ############################################################################
+ * English
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy 
+ * of this software and associated documentation files (the "Software"), 
+ * to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, 
+ * publish, distribute, sublicense, and/or sell copies of the Software, and 
+ * to permit persons to whom the Software is furnished to do so, 
+ * 
+ * subject to the following conditions:
+ * The above copyright notice and this permission notice shall be included 
+ * in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+ * AND NONINFRINGEMENT.
+ * 
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * ----------------------------------------------------------------------------
+ * 
+ * German:
+ * 
+ * Personen, die eine Kopie dieser Software und der dazugehörigen 
+ * Dokumentationsdateien (die "Software") erhalten, 
+ * wird hiermit die kostenlose Erlaubnis erteilt.
+ * uneingeschränkt mit der Software zu handeln, 
+ * einschließlich der Rechte zur Verwendung, zum Kopieren, Ändern, 
+ * Zusammenführen, Veröffentlichen, Verteilen,
+ * Unterlizenzen und / oder Verkauf von Kopien der Software und 
+ * Erlaubnis von Personen, an die die Software geliefert wird,
+ * 
+ * unter den folgenden Bedingungen:
+ * 
+ * Der obige Copyright-Hinweis und dieser Erlaubnisschein sind in 
+ * allen Kopien oder wesentlichen Teilen der Software enthalten.
+ * 
+ * DIE SOFTWARE WIRD "WIE BESEHEN" OHNE JEGLICHE GARANTIE, 
+ * AUSDRÜCKLICH ODER IMPLIZIERT, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT 
+ * AUF DIE GEWÄHRLEISTUNG DER MARKTFÄHIGKEIT, 
+ * EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG.
+ * 
+ * IN KEINEM FALL HAFTEN DIE AUTOREN ODER COPYRIGHT-INHABER FÜR ANSPRÜCHE, 
+ * SCHADEN ODER ANDERE HAFTUNG.
+ * 
+ * WENN SIE AUSSCHLIESSLICH EINES VERTRAGS, TORTES ODER ANDERWEITIG SIND, 
+ * HERAUSGEGEBEN, ABER ODER IN VERBINDUNG MIT DER SOFTWARE 
+ * ODER DIE NUTZUNG ODER ANDERE ABKOMMEN IN DER SOFTWARE.
  * 
  * ----------------------------------------------------------------------------
- * Programmer       :	Project-Founder and
- *                  :   Main-Author Christian 🧑 "TIPPO" 🧑 Kurs
+ *
+ * Frensh:
+ * Par la présente, une autorisation est accordée gratuitement à toute personne 
+ * obtenant une copie de ce logiciel et des fichiers de documentation associée 
+ * (le "Logiciel"),
+ * traiter le logiciel sans restriction, y compris, sans limitation, 
+ * les droits d'utilisation, de copie, de modification, de fusion, 
+ * de publication, de distribution, sous-licence, 
+ * et / ou vendre des copies du logiciel, 
+ * et permettre aux personnes à qui le logiciel est fourni de le faire,
+ * 
+ * sous réserve des conditions suivantes:
+ * 
+ * L'avis de copyright ci-dessus et cet avis de permission doivent être inclus 
+ * dans toutes les copies ou parties substantielles du logiciel.
+ * 
+ * LE LOGICIEL EST FOURNI "EN l’ETAT", SANS AUCUNE GARANTIE, 
+ * EXPRESSE OU IMPLICITE,
+ * Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES DE VALEUR MARCHANDE, 
+ * D'ADÉQUATION À UN USAGE PARTICULIER ET D'ABSENCE DE VIOLATION.
+ * EN AUCUN CAS, LES AUTEURS OU LES TITULAIRES DU DROIT D'AUTEUR NE PEUVENT 
+ * ÊTRE TENUS RESPONSABLES DE TOUTE RÉCLAMATION, 
+ * DE DOMMAGES OU D'AUTRE RESPONSABILITÉ
+ * QU'IL SOIT DANS UN ACTION DE CONTRAT, DE LORT OU DE AUTRE FACILITÉ, 
+ * RÉSULTANT DU LOGICIEL, OU NON OU LIÉ AVEC CE LOGICIEL
+ * OU L'UTILISATION OU D'AUTRES TRANSACTIONS DANS LE LOGICIEL.
+ * 
  * ----------------------------------------------------------------------------
- * Part				:	Visual.Operation.System.Native
- * ----------------------------------------------------------------------------
- * Base Class       :	NativeMethods
- * ----------------------------------------------------------------------------
- * Tool for Anti Malware:
- * Microsoft Safety Scanner 32/64BIT systemtool: 
- * mrt.exe (is 64BIT App !)
- * download from Microsoft Download Center
  * 
- * Microsoft Safety Scanner is a scan tool designed to find and 
- * remove malware from Windows computers. 
+ * Spanish:
  * 
- * Simply download it and run a scan to find malware and 
- * try to reverse changes made by identified threats.
+ * Por la presente se otorga el permiso, sin cargo, a cualquier persona que 
+ * obtenga una copia de este software y los archivos de 
+ * documentación asociados (el "Software"), para operar en el Software sin 
+ * restricciones, incluidos, entre otros, los derechos de uso, copia, 
+ * modificación, combinación, publicación, distribución, sublicenciar, 
+ * y / o vender copias del Software, y para permitir que las 
+ * personas a quienes se suministra el Software lo hagan,
  * 
+ * sujeto a las siguientes condiciones:
  * 
- * ----------------------------------------------------------------------------
- * GetLastError() pedant
- * WINBASEAPI
- * VOID
- * WINAPI
- * RestoreLastError( _In_ DWORD dwErrCode);
+ * El aviso de copyright anterior y este aviso de permiso se incluirán 
+ * en todas las copias o partes sustanciales del Software.
  * 
- * typedef VOID (WINAPI* PRESTORE_LAST_ERROR)(DWORD);
- * #define RESTORE_LAST_ERROR_NAME_A      "RestoreLastError"
- * #define RESTORE_LAST_ERROR_NAME_W     L"RestoreLastError"
- * #define RESTORE_LAST_ERROR_NAME   TEXT("RestoreLastError")
+ * EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, 
+ * EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A LAS 
+ * GARANTÍAS DE COMERCIABILIDAD, APTITUD PARA UN PROPÓSITO 
+ * PARTICULAR Y NO INCUMPLIMIENTO. EN NINGÚN CASO, LOS AUTORES O TITULARES DE 
+ * DERECHOS DE AUTOR SERÁN RESPONSABLES POR CUALQUIER RECLAMACIÓN, 
+ * DAÑOS U OTRAS RESPONSABILIDADES, SI EN UNA ACCIÓN DE CONTRATO, 
+ * CORTE O DE OTRA MANERA, DERIVADO DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE
+ * O EL USO O OTROS TRATOS EN EL SOFTWARE.
+ * 
  * -----------------------------------------------------------------------------
  * 
+ * Italian:
  * 
- * ----------------------------------------------------------------------------
- * camelCase defintion: 
- * company.project.layer.commponent
- * \company\ndp\source\projectname\filename\filename.cs
- * --------new development
- * ----------------------------------------------------------------------------
- * Change Project-Solution by .NET Framework 4.7.2 to 4.8.03752 Release
- * same by Visual Operation System Library - Windows 10 SDK 18362 Release Fix
- * ----------------------------------------------------------------------------
- * Windows 10 May Update only at Time for Insiders Build is fix 18362
- * after cleanups Microsoft gives culmulative update Revisions at Time .116
- * ----------------------------------------------------------------------------
- * Microsoft Open Branch 2020 - 20H1 - OS-Build 18890 
- * ----------------------------------------------------------------------------
- * Copyright © 2019 by  Visual Galaxy Framework Community Kernel Developer Team
- * ----------------------------------------------------------------------------
- * by Head-Author: Christian 🧑 "TIPPO" 🧑 Kurs - Visual C# Developer
- * ----------------------------------------------------------------------------
- * Portions Copyright © 2019 by Microsoft Corporation GmbH.
- * ----------------------------------------------------------------------------
+ * L'autorizzazione è concessa, a titolo gratuito, a chiunque ottenga una copia 
+ * di questo software e dei relativi file di documentazione (il "Software"),
+ * trattare il Software senza limitazioni, 
+ * inclusi senza limitazione i diritti di utilizzo, copia, modifica, fusione, 
+ * pubblicazione, distribuzione, concedere in sub-licenza e / o vendere 
+ * copie del Software e consentire alle persone a cui è fornito 
+ * il Software di farlo, 
+ * soggetto alle seguenti condizioni:
  * 
-/* ----------------------------------------------------------------------------
- * ----------------------------------------------------------------------------
- * Visual.Operation.System.dll
- * Maintainer: 
- * Christian 🧑'TIPPO'🧑 Kurs - Visual C#, C++ Developer and .NET Nerd.
- * ----------------------------------------------------------------------------
- * For Developers:
- * Change all to Visual Studio 2019 - V 16.0.0 - Visual C# 8.0 -
- * more Features and news.
- * ----------------------------------------------------------------------------
- * Copyright © 2018-2019
- * ----------------------------------------------------------------------------
- * Copyright © 2018-2019
- * ----------------------------------------------------------------------------
- * Copyright © 2018-2019
- * ----------------------------------------------------------------------------
- * Copyright © 2018-2019
- * ----------------------------------------------------------------------------
+ * La suddetta nota sul copyright e questa nota di autorizzazione devono 
+ * essere incluse in tutte le copie o parti sostanziali del Software.
+ * 
+ * IL SOFTWARE VIENE FORNITO "COSÌ COM'È", SENZA GARANZIA DI ALCUN TIPO, 
+ * ESPRESSA O IMPLICITA, INCLUSE, A TITOLO ESEMPLIFICATIVO, 
+ * LE GARANZIE DI COMMERCIABILITÀ, 
+ * IDONEITÀ PER UN PARTICOLARE SCOPO E NON VIOLAZIONE. 
+ * IN NESSUN CASO GLI AUTORI OI DETENTORI DEL COPYRIGHT SARANNO 
+ * RITENUTI RESPONSABILI PER QUALSIASI RECLAMO, DANNO O ALTRO RESPONSABILITÀ,
+ * SE IN UN AZIONE DI CONTRATTO, TORT O ALTRO, DERIVANTE DA, FUORI O IN 
+ * CONNESSIONE CON IL SOFTWARE OPPURE L'USO O ALTRE RACCOLTE DEL SOFTWARE.
  *
- * 
- * ----------------------------------------------------------------------------
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the 
- * along with this program.  If not, see 
- * ----------------------------------------------------------------------------
- * 
- * 
- * ----------------------------------------------------------------------------
- */
+ *****************************************************************************/
 
-/*-----------------------------------------------------------------------------
-    This software is the confidential and proprietary information of
-    VGF-KernelTeam - ("Confidential Information").  You shall not
-    disclose such Confidential Information and shall use it only in
-    accordance with the terms of the License Agreement you entered into
-    with VGF-KernelTeam.
-
-    VGF-KERNELTEAM MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY 
-    OF
-    THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-    PURPOSE, OR NON-INFRINGEMENT.
-
-    VGF-KERNELTEAM SHALL NOT BE LIABLE FOR ANY DAMAGES
-    SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
-    DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
-
-    Copyright_Version_1.0_BETA
-
-    This file is the same as x that comes with y,
-    except that the has been changed so that it is compilable
-    under more than just
-*/
-
-/******************************************************************************
- * ----------------------------------------------------------------------------
- * MAC, macOS, watchOS, tvOS is a registered trademark of Apple Computer, Inc.
- * ----------------------------------------------------------------------------
- * ! NOTE ! 
- * (Apple) iOS is a registered trademark of Cisco Corporation.
- * ----------------------------------------------------------------------------
- * Intel is a registered trademark of Intel Corporation.
- * ----------------------------------------------------------------------------
- * Active Desktop, ActiveX, Authenticode, BackOffice, FoxPro, FrontPage, 
- * Visual Studio, Jscript, Microsoft, Microsoft Press, MSDN, MS-DOS, MSN,
- * Outlook, PivotTable, PowerPoint, Visual Basic, Visual C++, Visual FoxPro,
- * Visual InterDev, Visual J++, J#, Visual Studio, Win32, Windows,
- * and Windows NT are either registered trademarks or
- * trademarks of Microsoft Corporation in the United States 
- * and/or other countries.
- * ----------------------------------------------------------------------------
- * Live now! Visual FoxPro as Visual FoxPro.NET after 
- * bring sourcecode to FoxPro Community
- * from Microsoft, new written Visual C#.
- * ----------------------------------------------------------------------------
- * Microsoft Java:
- * Visual J++, J# end 2007, but look at lot of sample and 
- * Microsoft Java SDK and 
- * Tippo Tip: look at sourcecode dirs - decompile .class to .javasharp
- * ----------------------------------------------------------------------------
- * Windows Class Foundation --> later .NET Framework in managed C++ and C#.
- * For Developer (Learning about Microsoft Developer):
- * 
- * MS Operation System - take free on MS GitHub: (NO COMMERICAL USE !)
- * ----------------------------------------------------------------------------
- * Tippo - Senior Member Windows Kernel Blog:
- * Make Parts Open Source of Windows Operation System.
- * ----------------------------------------------------------------------------
- * Microsoft GitHub 490 Projectsides:
- * ----------------------------------------------------------------------------
- * MS-DOS 1.2 and 2.0 ---- with sourcecode - Assembler Code written .asm
- * ----------------------------------------------------------------------------
- * Old Windows File Manager -- with sourcecode - C written .c
- * ----------------------------------------------------------------------------
- * Windows 10 Calculator is now open source written in C++,
- * Cooperation wanted, wishes, criticism, mistakes
- * 
- * ----------------------------------------------------------------------------
- * WRK-1.2_Master.zip 
- * is the Windows Operation System > Windows Kernel Sourcecode written in C.
- * 
- * ----------------------------------------------------------------------------
- * *** ATTENTION *** write for Export !
- * ----------------------------------------------------------------------------
- * This software is subject to the U.S. Export Administration Regulations and
- * other U.S. law, and may not be exported or re-exported to certain countries
- * ( Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) 
- * or 
- * to persons or entities prohibited from receiving U.S. exports
- * (including Denied Parties, Specially Designated Nationals,
- * and entities on the Bureau of Export Administration Entity List or
- * involved with missile technology or nuclear, chemical or biological weapons).
- *
- * © 1982 - 2019 by Microsoft Corporation. All rights reserved.
- * 
- * ***************************************************************************/
-
-// <!--------------------------------------------------------------------------->
-// <!-- Windows Operation System - Functions from any Windows Dll's: ----------->
-// <!--------------------------------------------------------------------------->
-// <!-- Copyright © 1982 - 2019 by Microsoft Corporation. All rights reserved. ->
-// <!--------------------------------------------------------------------------->
-// <!-- This material may not be reproduced, displayed, modified or distributed >
-// <!-- without the express prior written permission of the copyright holder.   >
-// <!-- Please check Windows SDK Information, same API's goes removed from Win-->
-// <!-- more and more .NET, Cloud (Azure), AI/KI , Windows ML (Machine Learning)>
-// <!-- Microsoft have written Windows Functions in .NET Framework a lot of, --->
-// <!-- but not all and public written, so no access on this Class and --------->
-// <!-- Functions, access over .NET classes and Methods written as Wrappers. --->
-// <!--------------------------------------------------------------------------->
+ //-----------------------------------------------------------------------------
+// Microsoft make Restrictions of Export for following Countries:
+// ============================================================================
+// This software is subject to the U.S. Export Administration Regulations and 
+// other U.S.law, and may not be exported or re-exported to certain countries
+// (Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) 
+// or
+// to persons or entities prohibited from receiving U.S.exports
+// (including Denied Parties, Specially Designated Nationals,
+// and entities on the Bureau of Export Administration Entity List or
+// involved with missile technology or nuclear, chemical or biological weapons)
+//-----------------------------------------------------------------------------
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
+//-----------------------------------------------------------------------------
 
 //-------------------------------------------------------------------------------
 // <!-- Microsoft New Name Convention and Rule Guideline ----------------------->
@@ -223,100 +287,10 @@
 // <!-- Permission to use it. ---------------------------------------------------->
 // <!----------------------------------------------------------------------------->
 // <!-- Project "Visual Galaxy Framework" - Codename 'PARIS' ---------------------> 
-// <!-- Copyright © 2019 by VGF-Kernelteam and ----------------------------------->
+// <!-- Copyright © 2020 by VGF-Kernelteam and ----------------------------------->
 // <!-- Project-Founder: Christian 🧑 'TIPPO' 🧑 Kurs. -------------------------->
 // <!-- For use this in our Project. --------------------------------------------->
 // <!----------------------------------------------------------------------------->
-//
-//---------------------------------------------------------------------------------
-// Compiler make to reverse the DllImportAttribute
-// [DllImport("Visual.Function.Library.dll", EntryPoint = "vgfVOLMsgBox", 
-// SetLastError = true, CharSet = CharSet.Unicode, 
-// CallingConvention = CallingConvention.StdCall)]
-//
-// reverse:
-//
-// [DllImport("Visual.Function.Library.dll", 
-// CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Unicode, 
-// EntryPoint = "vgfVOLMsgBox", SetLastError = true)]
-//
-// ! don't forget!, SetLastError only for C++, C#
-// not for Java and Visual Basic.NET (set false)
-//
-// Windows 10 with GetLastError -> GetWinLastError (.NET)
-// Windows 10 new with RestoreLastError.
-//---------------------------------------------------------------------------------
-//---------------------------------------------------------------------------------
-// Top Level Namespaces / Directives .NET Framework
-// at .NET Framework
-// some directives written intern with static, classes, Methods, Properties..
-// set: using static <namespace-name>;
-// use: directly Method
-// using static System.Math;
-// using static System.Console;
-//---------------------------------------------------------------------------------
-// All not in use grey it out, can delete them or the compile make it!
-// compiler delete commentaries, not used DllImportAtributes!, spaces...
-//---------------------------------------------------------------------------------
-
-// !------------------------------------------------------------------------------!
-// ! For all Developer's:                                                         !
-// !------------------------------------------------------------------------------!
-// ! Windows goes open - parts of Windows Operation System with Sourcecodes:      !
-// !------------------------------------------------------------------------------!
-// !------------------------------------------------------------------------------!
-// ! Windows 10 Calculator --------------------written in C++ --------------------!
-// ! Windows 10 Terminal&Console 'conhost.exe' written in C++ --------------------!
-// ! WindowsTerminal-master.zip download from GitHub -----------------------------!
-// !
-
-
-/**************************************************************************************************
- Windows 10 Professional as Multi-User System. 
- One or more Users on a one Computer. 
- admin Systemtool: netplwiz.exe - network policy wizard
- Only the Revisions increment by Microsoft after cleanup's Bugs.
- -------------------------------------------------------------------------------------------
-        (User Database: Windows Internal Database 'RESENT' max. Size 16 Tebibytes (Terabyte) ->
-        Tebibytes is the correctness Tera Binary Bytes ! Tebibyte and other come from 
-        International Bureau of Measures and Weights in Paris. (see table bytes)
-        Yotta Bytes is different to Yobibytes - Yotta binary bytes different in 20.9% 
- -------------------------------------------------------------------------------------------
- -------------------------------------------------------------------------------------------
-        (Admin can add Users and Rights or Account Operator)
-        -------------------------------------------------------------------------------------------
-        Username              SID
-        ===================== ==============================================
-        desktop-mnk3mvk\tippo S-1-5-21-3373537164-1258717689-2658483839-1002
-        commputer\username    Security Identity on Windows 10 for any User on System new!
-        -------------------------------------------------------------------------------------------
-        Show your saved Web Passwords by Providers, use Windows Web Password Tresor:
-        -------------------------------------------------------------------------------------------
-        System-Tool:
-        -------------------------------------------------------------------------------------------
-        c:\>control keymgr.dll
-        with security query, is your LogOn Screen Password
-        Left Tab all Web Passwords and right Site Windows Passwords 
-        -------------------------------------------------------------------------------------------
-        With or without photo - public Database - HIDDEN -
-        Fingerprint (device)
-        Face Detection
-        Password
-        PIN
-        
-        ===========================================================================================
-        Windows 10 Operation System have internal Database 'Resent'! : (start by Windows 2000)
-        ===========================================================================================
-        Windows Resent Database - Extensible Storage Engine - (first at Windows 2000)
-        transactional Database Engine maximal Storage 16 Tebibytes 
-        (old Terabyte is wrong, new is Tera Binary Byte (Tebibyte) 
-        have Table inside what they means.
-        
-        Differents by Sizes ! - Yotta Bytes to Yotta Binary Bytes different by 20.9 %)
-        https://docs.microsoft.com/de-de/windows/win32/extensible-storage-engine/extensible-storage-engine-reference    
- */
-
-
 
 /* 
  * .NET Framework Directives - System namespaces -
@@ -406,58 +380,7 @@ namespace Visual.Operation.System.Native
     // https://mail.google.com/mail/kurschristian
     //
     //---------------------------------------------------------------------
-
-    // <summary>
-    // Microsoft Windows Operation System
-    // Native C Structs, Functions, Enumerators pass to Visual C# and .NET
-    // All in .NET Framework.
-    // </summary>
-    // 
-    // XML-Comment sign for comments for each statement or Authorname
-    // <!-- -->
-    //
-    // <!-- Author TIPPO -->
-    //
-    // <E-mail>
-    //     write to me:
-    //     Google GMail or your Provider:
-    //    
-    // </E-mail>
-    // <!-- Author TIPPO -->
-    //
-    // <Website>
-    //     Our Community Website of Visual Galaxy Framework
-    //     go to TIPPO directly:
-    //    
-    //     https://www.vgfc.org/tippo
-    //     
-    // </Website>
-    //
-    //
-    // <Windows Specials>
-    //! Sample from > setup.bin < is compiled !
-    // any Windows Operation System have an GUID.
-    //
-    // supportedOS operation system mit GUID-numbers:
-    // <application>
-    //
-    // <!--Windows 10 -->
-    // <supportedOS Id = "{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
-    // < !--Windows 8.1 -->
-    // <supportedOS Id = "{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />
-    // < !--Windows 8 -->
-    // <supportedOS Id = "{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />
-    // < !--Windows Vista -->
-    // <supportedOS Id = "{e2011457-1546-43c5-a5fe-008deee3d3f0}" />
-    // < !--Windows 7 -->
-    // <supportedOS Id = "{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />
-    // </ application >
-    //
-    // </Windows Specials>
-    //
-    // <!-- Author TIPPO -->
-
-
+    
     /// <summary>
     /// 
     /// </summary>
