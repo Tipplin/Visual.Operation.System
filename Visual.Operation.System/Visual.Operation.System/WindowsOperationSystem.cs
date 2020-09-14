@@ -9278,14 +9278,15 @@ namespace Visual.Operation.System.Native
         /// <summary>
         /// MAC Method Uname
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- Author TIPPLIN -->
+        /// Source by Miguel de Icaza: Use Mac functions on Windows / Visual Studio Solution
         /// Apple libc dynamic link Library
         /// Google libc as 32 BIT Library and libc64 
         /// as 64 Library both as Runtimes on Smartphones.
         /// Google Document Guideline: both on Phone as official Google Android Device !.
         /// Failed one no Google Android Device ! Like China! runs only Kernelmode!
         /// 
-        /// <!-- Author Tipplin -->
+        /// <!-- Author TIPPLIN -->
         /// <param name="buf"></param>
         /// <returns>
         /// 
@@ -9296,20 +9297,9 @@ namespace Visual.Operation.System.Native
         /// <summary>
         /// Is Running on a MAC
         /// </summary>
-        /// <!-- Author Tippo -->
-        /// Insider Info:
-        /// macOS and Windows 10 Partition on a MAC Computer
-        /// both can use Systems.
-        /// 
-        /// Meeting Tim Cook and Sayta Nadella 'The War is over'
-        /// Partnership.
-        /// Apple Download Center - Apple Software for Windows 10 -
-        /// Apple iTunes (Music, Moves), Apple iCloud
-        /// Apple iTunes is Music DVD Player for own Music DVD's,
-        /// Start itunes put DVD in and he starts a Playlist,
-        /// Option implement in Directory iTunes\iTunesMedia\Music\-Music Interpret-\ all Music parts,
-        /// everytime you can play your favorites.
-        /// <!-- Author Tippo -->
+        /// <!-- Author TIPPLIN -->
+        /// MAC have an Partition Windows 10, so you can use both systems.
+        /// <!-- Author TIPPLIN -->
         /// <returns></returns>
         internal static bool IsRunningOnMac()
         {
