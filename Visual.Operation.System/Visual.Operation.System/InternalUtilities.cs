@@ -1,10 +1,6 @@
 ﻿/*********************************************************************************
-*	Copyright © 2019 by VGF-KernelTeam and Christian 🧑'TIPPO'🧑 Kurs.
+*	Copyright © 2020 by VGF-KernelTeam and Christian 🧑'TIPPLIN'🧑 Kurs.
 *			All Rights Reserved.
-*
-*   ▶▶ Parts of Copyright by Microsoft Corporation with Permission.
-*   ➡ Many Thanks for this Help !
-* 
 *********************************************************************************/
 /*
     This software is the confidential and proprietary information of
@@ -30,16 +26,6 @@
 */
 
 /**************************************************************************************************
-    MAC, macOS, watchOS, tvOS is a registered trademark of Apple Computer, Inc. 
-    ! NOTE ! iOS is a registered trademark of Cisco Corporation.
-    Intel is a registered trademark of Intel Corporation. 
-
-    Active Desktop, ActiveX, Authenticode, BackOffice, FoxPro, FrontPage, 
-    Visual Studio, Jscript, Microsoft, Microsoft Press, MSDN, MS-DOS, MSN, 
-    Outlook, PivotTable, PowerPoint, Visual Basic, Visual C++, Visual FoxPro, 
-    Visual InterDev, Visual J++, J#, Visual Studio, Win32, Windows, 
-    and Windows NT are either registered trademarks or 
-    trademarks of Microsoft Corporation in the United States and/or other countries.
     -----------------------------------------------------------------------------------------------
     🚩 Microsoft Export Restrictions 🚩 :
     -----------------------------------------------------------------------------------------------
@@ -52,19 +38,9 @@
     and entities on the Bureau of Export Administration Entity List or 
     involved with missile technology or nuclear, chemical or biological weapons).
 
-    Copyright © 1982 - 2019 Microsoft Corporation. All rights reserved.
+    Copyright © 1982 - 2020 Microsoft Corporation. All rights reserved.
 
 ****************************************************************************************************/
-
-//-----------------------------------------------------------------------------
-// Gecko: a PTB Time Clock App - https://uhr.ptb.de
-// PTB Uhr show you current Time with deviation 1 leap second and deviation 
-// local time with deviation milliseconds +- unsave.
-// Leap Second end of 2018 - 31.01.2018/01.01.2019
-//-----------------------------------------------------------------------------
-// USA - Microsoft have Information about Leap Second on:
-// 05:00:59 old -> 05::00:60 -> 05:01:00
-//-----------------------------------------------------------------------------
 
 /* 
  * All System or Windows Directives here:
@@ -125,7 +101,9 @@ using static Visual.Operation.System.Internal.InternalUtilities.VOSInternalUtili
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------
-//🧑
+// namespace Visual.Operation.System.Internal.InternalUtilities
+//-----------------------------------------------------------------------------
+//
 //
 //-----------------------------------------------------------------------------
 namespace Visual.Operation.System.Internal.InternalUtilities
@@ -139,65 +117,11 @@ namespace Visual.Operation.System.Internal.InternalUtilities
 
         #region ### Class PowerStatus ###
 
-        // /***
-        // * You comment block in Visual C# begins with forward slash and three asterics, that's allowed in C#.
-        // * NOT allowed ! /** like Java, Javascript
-        // *// NOT allowed !
-        // * 
-        // * 
-        // */
-        // NOTE: without accessmodi that means public, protected, internal, internal protected...
-        // all are private is the standard in Visual C#.
-        // ATTENTION ! private have an protection of degree, no access outside.
-        //
-
-
-
-
-        /*
-         * Use StringBuilder for Buffers, C++ Buffers:
-         * StringBuilder without set minium and maxium or value ()
-         * var stringBuilder = new StringBuilder(255, 8096);
-         * var stringBuilder = new StringBuilder(255);
-         * standard value internal is 16 chars fix.
-         * internal const int DefaultCapacity = 16;
-         * 
-         * var stringBuilder = new StringBuilder(259);
-         * 
-         * // Dir 260 chars allowed, but set 260 -1 is better.
-         * if (Win32Native.GetSystemDirectory(stringBuilder, 259) == 0)
-         * {
-         * }
-         * 
-         * var stringBuilder = new StringBuilder(256);
-         * int bufferSize = 256;
-         * 
-         * //--------------------------------------------- sizeof bufferSize
-         * if (Win32Native.GetComputerName(stringBuilder, ref bufferSize) == 0)
-         * {
-         *   
-         * }
-         * 
-         * Win32Native.SYSTEM_INFO lpSystemInfo = default(Win32Native.SYSTEM_INFO);
-         * 
-         * Win32Native.GetSystemInfo(ref lpSystemInfo);
-         * 
-         * return lpSystemInfo.dwPageSize;
-         * 
-         * 
-         * 
-         * 
-         */
-
-
-
-
-
-
         /// <summary>
         /// Instance to Class PowerStatus BatteryStatusInfo, while the Class is not written static.
         /// now is on Stack than!
-        /// <!-- Author Tippo -->
+        /// </summary>
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// Class PowerStatus from namespace System.Windows.Forms
         /// in this namespace are 300 Classes for use!
         /// Class Application - Application.AllowQuit true/false allowed or not allowed user to close the Application.
@@ -213,13 +137,11 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// CharSet.Auto
         /// Make sure and set not .Auto while C# Compiler change to .Ansi not to .unicode
         /// 
-        /// <!-- Author Tippo -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// 
         /// <remarks>
         /// see here Lambda operator for short names
         /// </remarks>
-        /// 
-        /// </summary>
         internal PowerStatus ps;
 
         /// <summary>
@@ -1521,7 +1443,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
             }
             catch (SystemException ex)
             {
+                // our famous MessageBox from native DLL - VFL.dll - with Enumerator STYLES: button, icons, SetForegroundWindow and Modals
                 VFLMsgBox(ex.Message, ex.Source, STYLES.OkCancel | STYLES.Exclamation | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
+                
                 // if Methode call fail, terminate with Exit_Code.
                 NativeRuntimeMethods.NRMExit(EXIT_CODES.ERROR_BAD_ARGUMENTS);
                 return false;
@@ -1641,10 +1565,11 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         public static string VGFUserDomainName()
         {
             
-                StringBuilder sb = new StringBuilder(1024);
+                var sb = new StringBuilder(1024);
 
                 int domainNameLen = sb.Capacity;
-
+                // NOTE: Windows Datatype boolean is 1 byte ! - (Visual C# bool have 4 bytes ! - hardcoded true and false)
+                // so we use in Visual C# byte datatype !
                 byte userNameEx = GetUserNameEx(EXTENDED_NAME_FORMAT.NameDnsDomain, sb, domainNameLen);
                 if (userNameEx == 1)
                 {
@@ -1658,26 +1583,7 @@ namespace Visual.Operation.System.Internal.InternalUtilities
 
                 return sb.ToString();
             
-        } // VGFUserDomainName
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        } 
 
 
 
