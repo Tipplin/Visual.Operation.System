@@ -15,7 +15,7 @@
 // Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
-// by Head-Author: Christian "TIPPO" Kurs - Visual C# Developer
+// by Head-Author: Christian "TIPPLIN" Kurs - Visual C# Developer
 // Portions Copyright © 1982 - 2020 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
 // Warning:
@@ -95,7 +95,7 @@ using System.Runtime.InteropServices;
 namespace Visual.Operation.System.Base
 {
     /// <summary>
-    /// 
+    /// Internal Base for Visual Operation System
     /// </summary>
     internal static class VOSInternalBase
     {
@@ -176,6 +176,9 @@ namespace Visual.Operation.System.Base
         /// Set Class VOSAssemblyInfo on Stack with instancevariable vos!
         /// 
         /// </summary>
+	/// <!-- Author TIPPLIN -->
+	/// Set instancevariable for Class VOSAssemblyInfo without new, so on stack.
+	/// <!-- Author TIPPLIN -->
         internal static VOSAssemblyInfo vos;
 
         //---------------------------------------------------------------------
@@ -218,25 +221,25 @@ namespace Visual.Operation.System.Base
         internal static RegistryKey ndpKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey(CVKey);
 
 
-
-
-
-
-
-
-
-
         #endregion ### Global Constants ###
 
 
         #region ### Global Structs ###
-
-    
+	// Structs later here
         #endregion ### Global Structs ###
 
 
-        #region ### Enumerators ###
-
+        #region ### Global Enumerators ###
+		
+	/// <summary>
+        /// VOSApplicationAction for various Application Actions
+        /// </summary>
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// same Actions are bad, same as Info
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <remarks>
+        /// 
+        /// </remarks>
         internal enum VOSApplicationAction
         {
             /// <summary>
@@ -259,12 +262,13 @@ namespace Visual.Operation.System.Base
         }
 
         /// <summary>
-        /// © Windows Operation System Products
+        /// Windows Operation System Products
+	/// © 1982 - 2020 Copyright by Microsoft Corporation.
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// some Products are not supported !
 	/// some are written for Chinese People and Government 
-        /// <!-- Authore Tipplin -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <remarks>
         /// This parameter can be one of the following values (some products below may be out of support).
         /// </remarks>
@@ -489,8 +493,11 @@ namespace Visual.Operation.System.Base
             /// <summary>
             /// Windows 10 Professional 
             /// </summary>
+	    /// <!-- Author TIPPLIN -->
+	    /// remarks info by TIPPLIN
+	    /// <!-- Author TIPPLIN -->
             /// <remarks>
-            /// Is an Workstation:
+            /// Windows 10 Professional Edition is an Workstation:
             /// Limit RAM 2 Terabyte - 2 Processors
             /// Inside Windows Database 'Recent' maximal 16 Terabyte.
             /// Database for Services, Events, Storage, Recovery an Program/Projectsolution
@@ -717,6 +724,7 @@ namespace Visual.Operation.System.Base
             /// ACHTUNG !:
             /// Administratoren haben vollständigen und uneingeschränkten Zugriff auf den Computer oder die Domäne.
 	    /// ----------------------=============-----=========================
+	    /// Administrator have full access on Computer, can be set.
             /// That's the Different to User!. Windows 10 Professional blocked Folders by Account User. No Access!
             /// </summary>
             Administrator = 544,
@@ -780,9 +788,9 @@ namespace Visual.Operation.System.Base
         /// <summary>
         /// Gibt eine Zeichenfolge zurück, die den Namen der .NET-Installation angibt, auf der eine App ausgeführt wird.
         /// </summary>
-        /// <!-- Author Tippo 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author Tippo 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// 
         /// </remarks>
@@ -797,9 +805,9 @@ namespace Visual.Operation.System.Base
         /// <summary>
         /// Gibt an, ob die aktuelle Anwendung auf der angegebenen Plattform ausgeführt wird.
         /// </summary>
-        /// <!-- Author Tippo 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author Tippo 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// 
         /// </remarks>
@@ -814,9 +822,9 @@ namespace Visual.Operation.System.Base
         /// <summary>
         /// Ruft eine Zeichenfolge ab, die den Namen des Betriebssystems angibt, auf dem die App ausgeführt wird.
         /// </summary>
-        /// <!-- Author Tippo 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author Tippo 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// 
         /// </remarks>
@@ -831,9 +839,9 @@ namespace Visual.Operation.System.Base
         /// <summary>
         ///  Ruft die Prozessarchitektur einer aktuell ausgeführten App ab.
         /// </summary>
-        /// <!-- Author Tippo 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author Tippo 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// 
         /// </remarks>
