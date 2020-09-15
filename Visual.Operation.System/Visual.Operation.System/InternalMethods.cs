@@ -1,9 +1,6 @@
 ﻿/******************************************************************************
-*	Copyright © 2019 by VGF-KernelTeam and Christian 'Tipplin' Kurs.
+*	Copyright © 2020 by VGF-KernelTeam and Christian 'TIPPLIN' Kurs.
 *                      All Rights Reserved.
-* -----------------------------------------------------------------------------
-*   Parts of Copyright by Microsoft Corporation with Permission.
-*   Many Thanks for this Help !
 * 
 ******************************************************************************/
 
@@ -11,37 +8,11 @@
  * ----------------------------------------------------------------------------
  * Visual.Operation.System.dll
  * Maintainer: Christian 'TIPPO' Kurs - Visual C#, C++ Developer and .NET Nerd.
+ * 
  * ----------------------------------------------------------------------------
- * For Developers:
- * Change all to Visual Studio 2019 - V 16.0.0 - Visual C# 8.0 -
- * more Features and news.
+ * Copyright © 2020
  * ----------------------------------------------------------------------------
- * Copyright © 2018-2019
- * ----------------------------------------------------------------------------
- * ! NOTE ! for Linux Kernel 5.1:
- * Developer have change the 2038 Problem with Unix-Timestamp,
- * old Unix Timestamp time_t is an integer value at 19.01.2038 03:14:08 Hour
- * he overflow ! while the old value run at 01.01.1970, 
- * expired seconds since 32 BIT.
- * New Linux Kernel 5.1 new Functions-calls(syscalls) unterstand the 64BIT
- * Timestamp Values.
- * ----------------------------------------------------------------------------
- * For use: (Linux Kernel 5.1)
- * AIO = Asynchronous I/O, data asyncron read/write, Programs can transfers
- * initialize and then we can do other works, in time the Kernel the I/O
- * Operations starts.
- * Persistent Memory, use by Datas, so anything want cap the Powerline PC,
- * the Datas don't lost, the Data Recovery Points hold the Datas, saved
- * next System starts he point to last save.
- * In Windows 10 make this the 
- * internal 'Resent' Database with next start the App,
- * Visual Studio, Recovery the last Datas.
- * Multi-User-MIMO = Serving multiple clients at the same time
- * SPDK = Storage Performance Development Kit
- * DPDK = Data Plane Development Kit
- * Filewatcher = Fanotify - simple and best Watching by change at File System.
- * io_uring = Exchange of I / O operations and data with 
- * user space takes place via separate ring buffers.
+ *
  * ----------------------------------------------------------------------------
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -124,32 +95,8 @@
     under more than just
 */
 
-/******************************************************************************
- * MAC, macOS, watchOS, tvOS is a registered trademark of Apple Computer, Inc.
- * ! NOTE ! iOS is a registered trademark of Cisco Corporation.
- * ----------------------------------------------------------------------------
- * Intel is a registered trademark of Intel Corporation.
- * 
- * Active Desktop, ActiveX, Authenticode, BackOffice, FoxPro, FrontPage, 
- * Visual Studio, Jscript, Microsoft, Microsoft Press, MSDN, MS-DOS, MSN,
- * Outlook, PivotTable, PowerPoint, Visual Basic, Visual C++, Visual FoxPro,
- * Visual InterDev, Visual J++, J#, Visual Studio, Win32, Windows,
- * and Windows NT are either registered trademarks or
- * trademarks of Microsoft Corporation in the United States 
- * and/or other countries.
- * ----------------------------------------------------------------------------
- * Live now! Visual FoxPro as Visual FoxPro.NET after 
- * bring sourcecode to FoxPro Community
- * from Microsoft, new written Visual C#.
- * Visual J++, J# end 2007, but look at lot of sample and 
- * Microsoft Java SDK and 
- * Windows Class Foundation --> later .NET Framework in managed C++ and C#.
- * For Developer (Learning about Microsoft Developer):
- * MS Operation System - take free on MS GitHub: (NO COMMERICAL USE !)
- * MS-DOS 1.2 and 2.0 ---- with sourcecode - assembler written .asm
- * Windows File Manager -- with sourcecode - C written .c
- * 
- * 
+
+ /*
  * ----------------------------------------------------------------------------
  * *** ATTENTION *** write for Export !
  * 
@@ -162,7 +109,7 @@
  * and entities on the Bureau of Export Administration Entity List or
  * involved with missile technology or nuclear, chemical or biological weapons).
  *
- * © 1982 - 2019 by Microsoft Corporation. All rights reserved.
+ * © 1982 - 2020 by Microsoft Corporation. All rights reserved.
  * 
  * ***************************************************************************/
 
@@ -313,6 +260,7 @@ namespace Visual.Operation.System.Internal
             //-------------------------------------------------------------------------
             // make query for current operation system,
             // is 64 System ? - global internal with Lambda-operator => is an Property
+            // If NO 64BIT System, make EXIT with exitcode enumerator !
             //-------------------------------------------------------------------------
             if (!X64)
             {
@@ -378,56 +326,8 @@ namespace Visual.Operation.System.Internal
 
         #region ### Windows Operation System Information ###
 
-        /* -------------------------------------------------------------------
-         * Windows 10 Spring Creators Update - April Update Redstone 4 - 
-         * OS-Build 17134 actual Revision 191
-         * 
-         * Windows 10 October Update 2018 - Upcoming feature update 
-         * October 2018 Redstone 5 - actual OS-Build 17754
-         * This is the last Redstone !, breaking!
-         * --------------------------------------------------------------------
-         * Windows 10 Defender Anti-Virus-Module
-         * Windows 10 Defender Anti-Virus-Anti-Malware Module 1809
-         * Antimalware (Antivirus + Antispyware)
-         * ("Antivirus-Antischadwareplattform")
-         * 
-         * This zwo Module everytime new! - with newest Virus Signatures.
-         * 
-         * --------------------------------------------------------------------
-         * 2019:
-         * Windows 10 19H1 - Next feature update - 2019 First in Year
-         * in develop actual OS-Build 18329.
-         * 
-         * Windows 10 March Update 2019 - 1903
-         * --------------------------------------------------------------------
-         * Windows 10 19H2 - 2019 Second in Year
-         * 
-         * --------------------------------------------------------------------
-         * For Developers:
-         * ATTENTION:
-         * At Windows 10 - Operation System source here from SDK - 19H1 - 2019:
-         * in Headerfiles set this, note! 
-         * Microsoft next Version Parts removed/set deprecated
-         * ** DEPRECATED ** DEPRECATED ** DEPRECATED ** DEPRECATED 
-         * winnt.h
-         * ****** OBSOLETE functions
-         * --------------------------------------------------------------------
-         * New SDK's, new API's 
-         * (!ATTENTION! some Old Api's, Microsoft removed out OS) 
-         * 
-         * Windows goes AI/KI, Azure, Cloud, 
-         * Machine Learning (Preview last SDK - Windows ML)
-         * Have Questions or anything, use the E-Mail from 
-         * Windows Developer / Software Engineers,
-         * wishes, idea's or other welcome... 
-         * Have fun with them nicknames, joke: 'bag on the Head'
-         * overcoat: 'Big Mouse'
-         * Website: 
-         * 
-         * 
-         * 
-         * --------------------------------------------------------------------
-        */
+        
+        
         #endregion ### Windows Operation System Information ###
 
 
@@ -440,7 +340,9 @@ namespace Visual.Operation.System.Internal
         /// Check Windows Operation System
         /// 
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
+        ///
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <returns>
         /// returned current Windows Version as string
         /// </returns>
@@ -478,131 +380,17 @@ namespace Visual.Operation.System.Internal
         } // end of method::VOSCheckWindowsOperationSystem
 
         #region ### Windows 10 Check Operation System with Revisionnumber ###
-
-        /* ------------------------------------------------------------------------------------
-         * New Windows 10 - Major 10 Minor 0 ever!, Build and Revision increment by Microsoft.
-         * Operation-System-Build increment after great update most 2 or 3 in Year.
-         * ------------------------------------------------------------------------------------
-         * Operation-System-Revision increment everytime, bugfixes, improvements, securityfixes
-         * most by cumulative updates... but no new functions!.
-         * ------------------------------------------------------------------------------------
-         * In the next codeline found a constant CVKey for registry key in Class-Head:
-         * with sign @ as unicode (UTF16), only one backward slash, 
-         * normally two backward slashes.
-         * 
-         * @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion";
-         * -------------------------------------------------------------------------------------
-         * Registry the System Database, settings, information and more
-         * 
-         * 
-         * -------------------------------------------------------------------------------------
-         */
-        /**********************************************************************
-       * 
-       * Windows 10 October Update - Information and Revisions -
-       * Windows 10 Professional Edition is a Workstation.
-       * Windows 10 Home Edition, have no all Features and no Firewall,
-       * no more Networking / Cloud.
-       * 
-       * see below following comments !
-       * 
-       *********************************************************************/
-
-        //--------------------------------------------------------------------------------------------------
-        // New Great Update: Windows 10 October Update 2018 - OS-Build 17763.1 - 02.10.2018 -
-        //--------------------------------------------------------------------------------------------------
-        // TIPPOTIP: Let automatic update's!, Microsoft Cumulative Update are automatic,
-        // most by Bugfixes, Security Leaks and Improvements...
-        // Microsoft increment then Revisionnumber automatic, see at Command Tool, Registry-Key UBR.
-        // More Functionality, more Functions by New Dynamic Link Library's (SDK 17763 C++ New Headerfiles)
-        //--------------------------------------------------------------------------------------------------
-        // Windows 10 supports Oracle Java, all Java App's runs. 
-        //
-        // automatic update by new Java and JDK's. (Java 10, 11, next 12)
-        // Microsoft Umbrellas Windows API DLL's: --- in folder \bin - Java JRE 1.8.0_201 - 22.01.2019
-        // api-ms-win-core-util-l1-1-0.dll - new update Java JRE 22.01.2019
-        // JavaAccessBridge-32.dll - Windows to Java ?
-        // JAWTAccessBridge-32.dll - AWT
-        // WindowsAccessBridge-32.dll - Java to Windows ?
-        // wsdetect.dll
-        //--------------------------------------------------------------------------------------------------
-        // App - Programs and Features --> Windows Features actived/deactived (Window): 
-        //--------------------------------------------------------------------------------------------------
-        // NEW ! Virtual Machine Platform - Enables Platform Support for Virtual Machines.
-        // NEW ! Device Lockdown
-        // NEW ! Data Center Bridging (IEEE)
-        // NEW ! Guarded Host
-        // NEW ! Work Folders Client
-        // NEW ! TFTP Client
-        // NEW ! Container Image Manager
-        // NEW ! Containers
-        // NEW ! Host worked WebKernel (IIS)
-        // NEW ! ADLDS - Active Directory Lightweight Directory Service
-        // NEW ! Windows Process Activation Service:
-        // ----.NET Enviroment
-        // ---- Configuration API's
-        // ---- Processmodell's
-        // --------------------------------------------------------------------------------------------------
-        // Network Libraries Client/Server only at Professional/Enterprise:
-        // Windows 10 Professional Edition is now a Workstation. command line tool:
-        // c:\>net accounts under Role of Computer stand WORKSTATION.
-        //---------------------------------------------------------------------------------------------------
-        // c:\>whoami /all
-        // while Windows 10 Multi User System is, one User or more on one Computer,
-        // LogScreen one or more users.
-        // 
-        // --------------------------------------------------------------------------------------------------
-        // Any User become a Security ID from Windows 10
-        // --------------------------------------------------------------------------------------------------
-        // BENUTZERINFORMATIONEN
-        // ---------------------
-        //
-        // Computername\Benutzername             SID
-        // ===================== ==============================================
-        // desktop-mnk3mvk\tippo S-1-5-21-3373537164-1258717689-2658483839-1002
-        // ...
-        //
-        // Shwo our IP-Configuration on Computer
-        // c:\>ipconfig
-        // your own IPv4 Adress
-        // IPv4-Adresse  . . . . . . . . . . : 192.168.8.110
-        // IPv6-Adresse 
-        // --------------------------------------------------------------------------------------------------
-        // NEW Networking Dynmaic Link Libraries - many more...
-        // ATTENTION ! inside Microsoft can make query about License ! Client/Server Connection.
-        // TIPPOTIP: Microsoft Essential Server little Brother of Server 2017 - cost: 500 $
-        // 25 Users and 50 Devices with CAL.
-        // --------------------------------------------------------------------------------------------------
-        // WINSTA.dll - Winstation Library Connection Network / Server
-        // LOGONCLI.dll - Net LogOn Client DLL
-        //
-        // NEW Miscellous C/C++ Runtimes Libraries
-        // NEW dotnet command tools line Version 2.1.403
-        // NEW
-        //---------------------------------------------------------------------------------------------------
-
-        /*
-         * end of Comments
-         * 
-         */
-
-        /*
-         * For Developers:
-         * 1. want returned bool (0 or 1) as literal string, so write true.ToString() or false.ToString() =>
-         * True or False as returned string, but you must change returned datatype from bool to string.
-         * 
-         */
-
+            
         /// <summary>
         /// Check Windows 10 Version, is OS-Build 17134 and Revision 1
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// TIPPO become first Final Release before STOPPED!
         /// Windows 10 'Spring Creators Update' - 17134.1 was the Final Release but Microsoft has STOPPED !,
         /// inside BIG BUG !, after cleanup's rename the Update to Windows 10 April Update.
         /// For Questions at Windows 10, over there my E-Mail or Website, All welcome!
         /// 
-        /// <!-- Author TIPPO -->
+        /// <!-- Author 🧑TIPPLIN 🧑-->
         /// <returns>
         /// returned True is OS-Version 17134 and Revision 1
         /// NO, False as Literal
@@ -1142,53 +930,14 @@ namespace Visual.Operation.System.Internal
         } // END of Method::VOSCompareWindows10_OSBuild_And_OSRevision
 
 
-
-
-        /*-----------------------------------------------------------------------------------------
-         * Windows 10 - OS-Build at time build increment 19536 and Revision 1000 - 20H2
-         * Microsoft Skip Head the BuildNumber at Dec 2019 to 19536 as Active Development Branch
-         * the active develop from Microsoft Software Engineers.
-         * Windows 10 Build 19536.1000 is an .rs_pre_release by Pro Insider Preview.
-         * Microsoft increment OS-Build now, make cleanup's
-         * Microsoft Windows 10 Spring Update Apr 2004 - 2020
-         *----------------------------------------------------------------------------------------- 
-         * 2020 following changes comes:
-         * Windows 10 now modular, Shell Update Agent, only updating Modules who has new issues,
-         * features and new functions and more...
-         *----------------------------------------------------------------------------------------- 
-         * 
-         *----------------------------------------------------------------------------------------- 
-         */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         #endregion ### Windows 10 Check Operation System with Revisionnumber ###
 
         /// <summary>
         /// Get the Name of Windows 10 Edition Name, how is installed!
         /// </summary>
-        /// <!-- Author TIPPO 🧑 -->
+        /// <!-- Author TIPPLIN 🧑 -->
         /// 
-        /// <!-- Author TIPPO 🧑 -->
+        /// <!-- Author TIPPLIN 🧑 -->
         /// <remarks>
         /// Registry - EditionID
         /// Windows 10 Home
