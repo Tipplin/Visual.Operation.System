@@ -7,7 +7,8 @@
 /* ----------------------------------------------------------------------------
  * ----------------------------------------------------------------------------
  * Visual.Operation.System.dll
- * Maintainer: Christian 'TIPPO' Kurs - Visual C#, C++ Developer and .NET Nerd.
+ * Maintainer: Christian 'TIPPLIN' Kurs - 
+ * Visual C#, C++ Developer and .NET Nerd.
  * 
  * ----------------------------------------------------------------------------
  * Copyright © 2020
@@ -34,8 +35,10 @@
 
 
 
-/* insert emoji's with Screen - Tastatur 👩‍🦰 - 💥💫💘💓 right mouse click on taskbar, window Screemtastatur show, right on Taskbar show the sign, click it!
- * emoji's show with click smile face, choice an emoji and click it then he insert in document or here in commentblock. 😜
+/* insert emoji's with Screen - Tastatur 👩‍🦰 - 💥💫💘💓 right mouse click on taskbar, 
+ * window Screemtastatur show, right on Taskbar show the sign, click it!
+ * emoji's show with click smile face, choice an emoji and 
+ * click it then he insert in document or here in commentblock. 😜
  */
 
 /*** <!-- ⚠ **WARNING** -->
@@ -230,10 +233,7 @@ namespace Visual.Operation.System.Internal
          * https://kurschristian@gmail.com
          * 
          * Community Website TIPPO:
-         * http://www.vgfc.org/Tippo
-         * 
-         * my own email account by Google can load with:
-         * https://mail.google.com/mail/kurschristian
+         * in work
          * 
          * 
          */
@@ -247,10 +247,10 @@ namespace Visual.Operation.System.Internal
         /// public static class constructor
         /// without static compile make message "class can't instanceconstrutors!"
         ///
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// by set class instance in a other program, and call,
         /// this Message come first, out Class Constructor
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// </summary>
         /// <remarks>
         /// Query is 64BIT Operation System on current Computer.
@@ -340,9 +340,9 @@ namespace Visual.Operation.System.Internal
         /// Check Windows Operation System
         /// 
         /// </summary>
-        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         ///
-        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// returned current Windows Version as string
         /// </returns>
@@ -384,13 +384,13 @@ namespace Visual.Operation.System.Internal
         /// <summary>
         /// Check Windows 10 Version, is OS-Build 17134 and Revision 1
         /// </summary>
-        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// TIPPO become first Final Release before STOPPED!
         /// Windows 10 'Spring Creators Update' - 17134.1 was the Final Release but Microsoft has STOPPED !,
         /// inside BIG BUG !, after cleanup's rename the Update to Windows 10 April Update.
         /// For Questions at Windows 10, over there my E-Mail or Website, All welcome!
         /// 
-        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// returned True is OS-Version 17134 and Revision 1
         /// NO, False as Literal
@@ -535,9 +535,9 @@ namespace Visual.Operation.System.Internal
         /// <summary>
         /// Check Windows 10 Version, is OS-Build 17763.1 Final Release
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// Windows 10 October Update 2018 - 02.10.2018 - Final
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// 
         /// </returns>
@@ -606,9 +606,9 @@ namespace Visual.Operation.System.Internal
         /// <summary>
         ///  Check Windows 10 Version, is OS-Build 18362 and Revision 1
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// Microsoft Right, increment the Revisionnumber by updates.
         /// </remarks>
@@ -658,9 +658,9 @@ namespace Visual.Operation.System.Internal
         /// <summary>
         ///  Check Windows 10 Version, is OS-Build 18362 and Revision 116
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// This is official May Update Release
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// Microsoft Right, increment the Revisionnumber by updates.
         /// </remarks>
@@ -717,39 +717,15 @@ namespace Visual.Operation.System.Internal
         ///  Check Windows 10 Version, is OS-Build 18362 and Revision 10000
         ///  skip into second half year release begin by Revision 10000.
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// Microsoft skip Revision to 10000 by 19h2 - to OS-Build 18362.10000
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// Microsoft Right, increment the Revisionnumber by updates.
         /// Microsoft increment automatic Revisionnumber by Bugsfixes, Security Fixes by cumulative update.
         /// change UBR in Registry automatic.
         /// at Time Revision 15.07.2019 by 10005.
         /// second half year 19h2 with new system settings and libraries - Network, Web, Cloud, AI / KI...
-        /// Dictionaries in many Languages: 
-        /// Tipplin actived English and German Dictionary, spelling-orthography
-        /// Multilingual text suggestions must be download languages packages do you want.
-        /// AI Statistic - Windows 10 now with AI/KI - Windows 10 uses Artificial Intelligence - 
-        /// Word Counter, Automatically complete words, 
-        /// Suggested words, keystrokes, Spelling corrections, automatic corrections with SwiftKey
-        /// words entered by wiping.
-        /// Statistics on AI input support
-        /// all this active in every Application, Microsoft Editor with black field with three words,
-        /// 
-        /// For more Information about System use systemtool: systeninfo.exe on command line.
-        /// or call Windows Terminal (at Time Preview 0.2.1715.0) - powershell, command line and Linux Bash Shell in one app.
-        /// Windows Terminal an Windows Operation System Compoment as Open Source at GitHub.
-        /// for change some settings in Widnows Terminal use profile.json click on arrow down on Menue Bar click on Settings,
-        /// if Visual Studio installed he open profile.json:
-        /// "cursorHeight" : 15, ---------------> cursor height
-        /// "cursorShape" : "vintage", ---------> old cursor style green underline
-        /// "cursorShape" : "bar", -------------> normally cursor |
-        /// Tipplin Tip: want change in other folder, so input cd -space- and marked foldername right click on it, 
-        /// go return to cd -space- left click folder stand now here.
-        /// By Microsoft Build Conference:
-        /// Microsoft open Windows Operation System for all Developer's part to part all on GitHub.
-        /// Windows 10 Terminal, Windows 10 Calculator, Windows Implemantation Libraries (WIL) all in C++ and C#......
-        /// Cooperation wanted, please read information
         /// </remarks>
         /// <returns>
         /// Windows 10 Sep Update 2019 first revision
@@ -793,85 +769,14 @@ namespace Visual.Operation.System.Internal
 
         } // END of Method::VOSIsWIndows10Build18362.10000
 
-       
-
-
-
-
-      
-
-
-
-        /*----------------------------------------------------------------------------------------
-         * Windows 10 - 2020 - Open Branch 2020 -
-         * OS-Build at time build increment - 20H1 - at Time OS-Build 18945 - 31.07.2019 
-         * ---------------------------------------------------------------------------------------
-         * Microsoft make new builds at time for 2020 increment Build Number.
-         * 
-         * Developer Tippo Senior Member of Windows Kernel Team Blog:
-         * make sure, is come unicode in Windows only?! for International!:
-         * 
-         * 1. implement Unicode V 12.0, emojis 🧑👩🎅👩‍🎨, katemojis, symbols into Windows 10 - 2020 -
-         * (Windows 10 May Update 2019 - OS-Build 18362.116 - 
-         * emoji's over Screen-Keybroad set of On, Mouse move to Taskbar, 
-         * right click Screen-Keybroad click on. Show it Taskbar right side, click open, 🤩
-         * click on Face that's emoji's and chat symbols)
-         * 👁‍🗨 in Editor, Visual Studio are uni color, in Office with Color and Resize.🧑
-         * 
-         * 
-         * 2. katemojis with chat symbols.
-         * 
-         * 3. ATTENTION ! same Functions and other remove or fall out of Windows OS! see SDK!.
-         * there are marked!
-         * 
-         * 4. The best more .NET, Visual C++.NET and Visual C# ! into Windows 10 and make same.
-         * 
-         * ----------------------------------------------------------------------------------------
-         * ----------------------------------------------------------------------------------------
-         * Windows 10 Open Source - Parts of Operation System on GitHub with sourcecodes in C/C++ :
-         * Cooperation wanted on GitHub.
-         * ----------------------------------------------------------------------------------------
-         * 1. was the Windows 10 Calculator written in Visual C++.NET,
-         * as sourcecode on GitHub, want to work with Developer Team, more features!.
-         * ----------------------------------------------------------------------------------------
-         * 2. WRK-Master.zip is the Windows Research Kernel Sourcecode written in C.
-         *    Windows 10 OS-Build 14393 - 2016 -
-         * ----------------------------------------------------------------------------------------
-         * 3. WIL = Windows Implementation Libraries with sourcecode in C++ 
-         *-----------------------------------------------------------------------------------------
-         * 4. New Windows Terminal, old Windows Console -conhost.exe- with sourcecode in C++
-         *    Cooperation wanted on GitHub. (NEW Windows Terminal in Alpha/Beta State)
-         *----------------------------------------------------------------------------------------- 
-         * 5. Task explorer new TAB 
-         *-----------------------------------------------------------------------------------------
-         * 6. Microsoft Editor with German Spelling (German Dictionary) on German System.
-         *    New coding: Ansi, UTF 8, UTF-8 with BOM (Binary Object M), 
-         *    UTF-16 LE (Low Endian), UTF-16 BE (Big Endian)
-         *    Bing search over Web.
-         *    make sure have set Grammar Rules of on in Windows settings option:
-         *----------------------------------------------------------------------------------------- 
-         * 7.
-         *-----------------------------------------------------------------------------------------
-         * 8.
-         *-----------------------------------------------------------------------------------------
-         * 9.
-         *-----------------------------------------------------------------------------------------
-         * 10.
-         *-----------------------------------------------------------------------------------------
-         * 
-         * 
-         * 
-         * 
-         */
-
         /// <summary>
         ///  Check Windows 10 Version, is now OS-Build 18865
         ///  First Build for Windows 10 - 20H1 - 2020
         ///  Open Branch 2020 at 03.04.2019
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// Preview Build
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// 
         /// </remarks>
@@ -966,20 +871,8 @@ namespace Visual.Operation.System.Internal
 
             string releaseEditionKey = Convert.ToString(releaseKeyAsObjectEdition);
 
-            /* ----------------------------------------------------------------
-             * Windows 10 Home, Professional, Enterprise
-             * Special Editions:
-             * China, China Government, School, Education, Cloud, 
-             * ----------------------------------------------------------------
-             * Windows 10 Professional Edition best of:
-             * More Security: Firewall, Antivirusscanner, AntiVirusMalware and
-             * AntiRansomware (March update 2019), Network Protection - Domain,
-             * Private, Public Network with Firewall actived.
-             * Kernel isolation make admin, 
-             * Kernel isolation against malicious code injection
-             * ----------------------------------------------------------------
-             * returned Edition Name as string
-             */
+            
+            // returned Edition Name as string
             return releaseEditionKey;
 
         }
@@ -987,9 +880,9 @@ namespace Visual.Operation.System.Internal
         /// <summary>
         /// Get Windows 10 current Buildnumber
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// 
         /// </remarks>
@@ -998,57 +891,56 @@ namespace Visual.Operation.System.Internal
         /// </returns>
         public static string VOSGetWindows10CurrentBuild()
         {
-
-
-
             object releaseKeyAsObjectCurrentBuild = ndpKey.GetValue("CurrentBuild");
 
             string releaseCurrentBuildKey = Convert.ToString(releaseKeyAsObjectCurrentBuild);
 
-            // returned Current Build for Windows 10
+            // returned Current Build for Windows 10 as string
             return releaseCurrentBuildKey;
-
         }
 
         /// <summary>
-        /// Get current registered Organization of Windows
+        /// Get current registered Organization of Windows 
         /// </summary>
+        /// <!-- Author TIPPLIN 🧑-->
+        ///
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// 
         /// </returns>
         public static string VOSGetWindows10RegisteredOrganization()
         {
-
-
-
             object releaseKeyAsObjectRegisteredOrganization = ndpKey.GetValue("RegisteredOrganization");
 
             string releaseCurrentRegisteredOrganization = Convert.ToString(releaseKeyAsObjectRegisteredOrganization);
 
-            // returned Current Build for Windows 10
+            // returned Current Registered Organization as string
             return releaseCurrentRegisteredOrganization;
-
         }
 
         /// <summary>
         /// Get current registered Owner of Windows
         /// </summary>
+        /// <!-- Author TIPPLIN 🧑-->
+        ///
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns></returns>
         public static string VOSGetWindows10RegisteredOwner()
         {
-
             object releaseKeyAsObjectRegisteredOwner = ndpKey.GetValue("RegisteredOwner");
 
             string releaseCurrentRegisteredOwner = Convert.ToString(releaseKeyAsObjectRegisteredOwner);
 
             // returned Current Build for Windows 10
             return releaseCurrentRegisteredOwner;
-
         }
 
         /// <summary>
         /// Check is Remote Debugger present on System 
         /// </summary>
+        /// <!-- Author TIPPLIN 🧑-->
+        ///
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns></returns>
         public static bool VOSCheckIsRemoteDebuggerPresent()
         {
@@ -1064,9 +956,9 @@ namespace Visual.Operation.System.Internal
         /// <summary>
         /// Show Copyright Message
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// Info about Copyright Assembly Visual.Operation.Library.dll 
-        /// <!-- Author Tipplin -->
+        /// <!-- Author TIPPLIN 🧑-->
         internal static void VOSShowDeveloperMessage()
         {
             string vosmessage1 = "© Visual.Operation.System.dll";
@@ -1074,7 +966,9 @@ namespace Visual.Operation.System.Internal
             vosmessage = "Info about Copyright Assembly Visual.Operation.Library.dll\n\n";
             vosmessage += "Copyright © 2019  by VGF-Community KernelTeam and Christian 'Tipplin' 🐻 Kurs\n";
             vosmessage += "Portions © 1982 - 2019 Microsoft Corporation. All rights reserved.\n";
-
+            //
+            // VFLMsgBox from Visual.Function.Library, wrapper written C/C++ from Windows Operation System API
+            // pass on, write Enumerator STYLES for Buttonstyle, Icons, Window Reason, Modal Style
             VFLMsgBox(vosmessage, vosmessage1, STYLES.OkOnly | STYLES.Information | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
         }
 
@@ -1092,9 +986,9 @@ namespace Visual.Operation.System.Internal
 
 
 
-    } // end of class::InternalOSMethods
-
-} // end of namespace::Visual.Operation.System.Internal
+    } // END::OF::CLASS::InternalOSMethods
+    
+} // END::OF::NAMESPACE::Visual.Operation.System.Internal
 
 /*****************************************************************************/
 /********************** END OF FILE::InternalMethods.cs **********************/
