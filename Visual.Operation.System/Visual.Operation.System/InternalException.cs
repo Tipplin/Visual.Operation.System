@@ -7,7 +7,7 @@
 //#############################################################################
 //
 //-----------------------------------------------------------------------------
-// Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
+// Programmer       :	Project-Founder and Main-Author Christian'TIPPLIN'Kurs
 //-----------------------------------------------------------------------------
 // Part				:	InternalException
 //-----------------------------------------------------------------------------
@@ -91,9 +91,9 @@ namespace Visual.Operation.System.InternalException
     /// <summary>
     /// Class InternalVOSException
     /// </summary>
-    /// <!-- Author 🧑TIPPLIN 🧑-->
-    ///
-    /// <!-- Author 🧑TIPPLIN 🧑-->
+    /// <!-- Author TIPPLIN 🧑-->
+    /// Class now in progress
+    /// <!-- Author TIPPLIN 🧑-->
     /// <remarks>
     /// 
     /// </remarks>
