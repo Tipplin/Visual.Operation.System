@@ -1,5 +1,5 @@
 ﻿/*********************************************************************************
-*	Copyright © 2020 by VGF-KernelTeam and Christian 🧑'TIPPLIN'🧑 Kurs.
+*	Copyright © 2020 by VGF-KernelTeam and Christian 'TIPPLIN'🧑 Kurs.
 *			All Rights Reserved.
 *********************************************************************************/
 /*
@@ -121,7 +121,7 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// Instance to Class PowerStatus BatteryStatusInfo, while the Class is not written static.
         /// now is on Stack than!
         /// </summary>
-        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// Class PowerStatus from namespace System.Windows.Forms
         /// in this namespace are 300 Classes for use!
         /// Class Application - Application.AllowQuit true/false allowed or not allowed user to close the Application.
@@ -137,16 +137,15 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// CharSet.Auto
         /// Make sure and set not .Auto while C# Compiler change to .Ansi not to .unicode
         /// 
-        /// <!-- Author 🧑TIPPLIN 🧑-->
-        /// 
-        /// <remarks>
-        /// see here Lambda operator for short names
-        /// </remarks>
+        /// <!-- Author TIPPLIN 🧑-->
         internal PowerStatus ps;
 
         /// <summary>
         /// Battery Charge Status as string
         /// </summary>
+        /// <remarks>
+        /// see here Lambda operator for short names
+        /// </remarks>
         internal string BattCS => ps.BatteryChargeStatus.ToString();
 
         /// <summary>
@@ -174,12 +173,8 @@ namespace Visual.Operation.System.Internal.InternalUtilities
 
 
 
-    } // end of Class::BatteryStatusInfo
-
-
-
-
-
+    } // END::OF::CLASS::BatteryStatusInfo
+    
     /// <summary>
     /// class InternalUtilities most at Windows Operation System
     /// </summary>
@@ -234,9 +229,10 @@ namespace Visual.Operation.System.Internal.InternalUtilities
 
 
         #region ### Struct MemoryStatusex with short name, use Lambda Operator => ###
-
+        //
         // use Struct MEMORYSTATUSEX, use instancevariable msx
-
+        //
+            
         /// <summary>
         /// Available Physical Memory at System
         /// </summary>
@@ -282,6 +278,10 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// Counts Mouse Buttons
         /// </summary>
+        /// <!-- Author TIPPLIN 🧑-->
+        /// Microsoft new Mouse is Multitasking capable, one mouse for Three Monitors only.
+        /// automatic detecting when Mouse move to other Monitor.
+        /// <!-- Author TIPPLIN 🧑-->
         internal static int MouseButton => SystemInformation.MouseButtons;
 
         /// <summary>
@@ -347,7 +347,7 @@ namespace Visual.Operation.System.Internal.InternalUtilities
          * 
          * http://www.iso.org
          * 
-         * Unicode Ogranization - .NET unicode is Version 12.1.0 
+         * Unicode Ogranization - .NET unicode is Version 13.0.0 
          * Unicode 12.1 adds exactly one character, for a total of 137,929 characters. 
          * Take in your Project only unicode !
          * Windows Operation System in unicode / ansi written,
@@ -503,10 +503,10 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// STYLES in intellsense Window - Style.enum-member
         /// Style.OKOnlyButton | STYLES.Iconname | STYLES.SetForgroundWindow | STYLES.SystemModal
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// Initial enum by VB.NET as intellisense Window, 
         /// so write it for Visual C#.
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// Windows Operation System Icons in imageres.dll (all resources), shell32.dll.
         /// Zipper 7Zip open imagres.dll see under tag Resource, all resources as resourcenumber (many)
@@ -648,14 +648,6 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         }
         
 
-
-
-
-
-
-
-
-
         #endregion  ### Windows Operation System - Enumerators - ###
 
         #region ### Windows Operation System - Structures - ###
@@ -663,9 +655,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// Structure STARTUPINFO
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// insert at 21.09.2018 11:00
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// 
         /// </remarks>
@@ -714,9 +706,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// Struct PROCESS_INFORMATION
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// insert at 21.09.2018 11:00
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// 
         /// </remarks>
@@ -738,14 +730,18 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         #endregion ### Windows Operation System - Structures - ###
 
 
+        #region ### Assembly Information about Visual.Operation.System.Library ###
 
-
+        /*
+        * For more Information about Class VOSAssemblyInfo, see File AssemblyInfo.cs
+        * This Class is NOT standard !.
+        */
         /// <summary>
         /// Get the Name of Assembly
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// use Class AssemblyInfo, what not normally in File AssemblyInfo.cs
-        /// <!-- Author TIPPO-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// 
         /// </returns>
@@ -758,9 +754,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// Get the Copyright Info of Assembly
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// 
         /// </returns>
@@ -773,9 +769,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// Get the Assembly Description
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// 
         /// </returns>
@@ -789,14 +785,14 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// Validate the current Assembly GUID
         /// Assembly GUID in this now, stands in AssemblyInfo.cs and Class AssemblyInfo
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// GUID's for all Windows Operation Systems !
         /// Setup.bin - is setup file for Windows - is compiled,
         /// but have XML block with GUID's, read with Editor.
         /// Windows XP to Windows 10
         /// GUID - Apple UUID
         /// 
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// 
         /// </returns>
@@ -971,9 +967,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// 
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author Tipplin-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <param name="Methodname"></param>
         /// <remarks>
         /// // Generate an error
@@ -1030,6 +1026,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
                 case (int)ApplicationAction.Information:
                     vosmessage = Messagetext;
                     VFLMsgBox(vosmessage, "Application Exit Message Info ", STYLES.OkOnly | STYLES.Information | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
+                    
+                    // NOTE: This Method is an Runtime Function from Visual C++ Runtime Library.
+                    // cexit() - terminate process now directly and cleanup stack.
                     NRMCExit();
                     break;
                 case (int)ApplicationAction.Warning:
@@ -1244,9 +1243,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// Get last Dll Error Code
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// If your set in [DLLImportAttribute] SetLastError = true,
         /// by unmanaged Dll Methods.
@@ -1264,7 +1263,7 @@ namespace Visual.Operation.System.Internal.InternalUtilities
             catch (SystemException ex)
             {
                 VFLMsgBox(ex.Message, ex.Source, STYLES.OkOnly | STYLES.Critical | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
-                // Visual C++ Runtime Function
+                // This Method is an Visual C++ Runtime Function: Exit(int errorcode) - errorcode is an Enumerator EXIT_CODES.
                 return NRMExit(EXIT_CODES.ERROR_INVALID_FUNCTION);
             }
 
@@ -1424,9 +1423,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// 
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!-- Author Tipplin -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// 
         /// </returns>
@@ -1437,8 +1436,10 @@ namespace Visual.Operation.System.Internal.InternalUtilities
                 // Create Process and Start the given .exe with/without Arguments
                 // her the command line console and the system tool Control is system control
                 // for all .exe app's
-                // call Webbrowser.exe and Website (argument) directly !
-                //
+                // Call Webbrowser.exe and Website (argument) directly !.
+                // NOTE: NEW Microsoft Edge Webbrowser in an separately Application NOW ! 
+                // in dir:C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                // use here Process.Start, in command line you can use command start <space><appname> msedge.
                 Process.Start("microsoft-edge:"+ Website);
             }
             catch (SystemException ex)
@@ -1553,9 +1554,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// Get User Domainname
         /// </summary>
-        /// <!-- Author Tippo -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// 
-        /// <!--Author Tippo -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// Ruft den Netzwerkdomänennamen ab, der dem aktuellen Benutzer zugeordnet ist.
         /// </remarks>
@@ -1568,8 +1569,10 @@ namespace Visual.Operation.System.Internal.InternalUtilities
                 var sb = new StringBuilder(1024);
 
                 int domainNameLen = sb.Capacity;
-                // NOTE: Windows Datatype boolean is 1 byte ! - (Visual C# bool have 4 bytes ! - hardcoded true and false)
+                //
+                // NOTE: Windows Datatype boolean is 1 byte ! - (Visual C# bool have 4 bytes ! - hardcoded! true and false)
                 // so we use in Visual C# byte datatype !
+                //
                 byte userNameEx = GetUserNameEx(EXTENDED_NAME_FORMAT.NameDnsDomain, sb, domainNameLen);
                 if (userNameEx == 1)
                 {
