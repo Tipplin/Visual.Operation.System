@@ -938,6 +938,18 @@ namespace Visual.Operation.System.Native
 
         /// <summary>
         /// Filename Limit Drag and Drop
+        ///-------------------------------------------------
+        /// the suffix is now open of limit (255 chars)
+        /// filename.txt:
+        /// prefix.suffix
+        /// tell windows with what app you open the file
+        /// use systemtool assoc.exe - .yoursuffix = txt;
+        /// so Windows open the file with Editor
+        /// if NOT: Windows open Window with Message:
+        /// Open File with ?
+        ///--------------------------------------------------
+        /// standard is 260, but use 260 -1, so no overflow ! 
+        ///
         /// </summary>
         public const int MAX_FILE_NAME = 260;
 
