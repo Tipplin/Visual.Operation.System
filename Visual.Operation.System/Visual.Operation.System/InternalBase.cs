@@ -1,7 +1,7 @@
 ﻿
 //#############################################################################
 //
-// Project			:	Visual.Galaxy.Framework
+// Project	    :	Visual.Operation.Library
 //
 //#############################################################################
 //
@@ -82,21 +82,14 @@ using System.Runtime.InteropServices;
 // namespace Visual.Operation.System.Base - internal
 // use internal Windows Operation System Base
 //-----------------------------------------------------------------------------
-// NOTE!: have set Class Registry inside, but is NOT used in Linux and macOS
-// have no Registry, compability can set by use .NET CORE 3.0 with:
-// nuget:
-// Microsoft.Windows.Compatibility package 
-// Microsoft.Windows.Compatibility.Shims package 
-// for cross over programming: Windows, Linux, macOS X
-//-----------------------------------------------------------------------------
-// alternate:
-// write switch OperationSystem for Windows, Linux, macOS X
-//-----------------------------------------------------------------------------
 namespace Visual.Operation.System.Base
 {
     /// <summary>
     /// Internal Base for Visual Operation System
     /// </summary>
+    /// <!-- Author 'TIPPLIN' 🧑-->
+    /// Internal Base Class for global settings
+    /// <!-- Author 'TIPPLIN' 🧑-->
     internal static class VOSInternalBase
     {
 
@@ -122,7 +115,7 @@ namespace Visual.Operation.System.Base
         //---------------------------------------------------------------------
         // as Comment allowed <!-- --> simplesample for Authorname Comment...
         // but not show in Object Viewer by Comments.
-        // <!-- Author TIPPO -->
+        // <!-- Author 'TIPPLIN' 🧑-->
         //---------------------------------------------------------------------
 
         //---------------------------------------------------------------------
@@ -176,9 +169,9 @@ namespace Visual.Operation.System.Base
         /// Set Class VOSAssemblyInfo on Stack with instancevariable vos!
         /// 
         /// </summary>
-	/// <!-- Author TIPPLIN -->
+	/// <!-- Author 'TIPPLIN' 🧑-->
 	/// Set instancevariable for Class VOSAssemblyInfo without new, so on stack.
-	/// <!-- Author TIPPLIN -->
+	/// <!-- Author 'TIPPLIN' 🧑-->
         internal static VOSAssemblyInfo vos;
 
         //---------------------------------------------------------------------
@@ -191,10 +184,10 @@ namespace Visual.Operation.System.Base
         /// <summary>
         /// Set constant Registry Key Entry
         /// </summary>
-        /// <!-- Author Tipplin -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// set short constant CVKey for Registry Key Entry
         /// for @ see overthere by instance.
-        /// <!-- Author Tipplin -->
+        /// <!-- Author TIPPLIN 🧑-->
         internal static string CVKey = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion";
 
 
@@ -205,7 +198,7 @@ namespace Visual.Operation.System.Base
         /// for Registry and open constant the Registry Key.
         /// Global Access for all Methods in this File.
         /// </summary>
-        /// <!-- Author Tippolin -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// !NOTE! set modi readonly, we want only the Registry Value
         /// readonly, private as shield protection, so no access outside.
         /// Visual C#: 
@@ -213,7 +206,7 @@ namespace Visual.Operation.System.Base
         /// so want access of class, set public.
         /// If class is static so set public static, internal static...,
         /// is in this moment same as const.
-        /// <!-- Author Tippolin -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// the actual current build on this computer.
         /// static readonly object releaseKeyAsObjectCurrentBuild = ndpKey.GetValue("CurrentBuild");
@@ -234,9 +227,9 @@ namespace Visual.Operation.System.Base
 	/// <summary>
         /// VOSApplicationAction for various Application Actions
         /// </summary>
-        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <!-- Author 'TIPPLIN' 🧑-->
         /// same Actions are bad, same as Info
-        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <!-- Author 'TIPPLIN' 🧑-->
         /// <remarks>
         /// 
         /// </remarks>
@@ -265,10 +258,10 @@ namespace Visual.Operation.System.Base
         /// Windows Operation System Products
 	/// © 1982 - 2020 Copyright by Microsoft Corporation.
         /// </summary>
-        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// some Products are not supported !
 	/// some are written for Chinese People and Government 
-        /// <!-- Author 🧑TIPPLIN 🧑-->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// This parameter can be one of the following values (some products below may be out of support).
         /// </remarks>
@@ -694,31 +687,31 @@ namespace Visual.Operation.System.Base
         /// <summary>
         ///  Gibt den Typ des Windows-Kontos verwendet.
         /// </summary>
-        internal enum WindowsAccountType
+        internal enum VOSWindowsAccountType
         {
             /// <summary>
             /// Windows Standard User Account.
             /// </summary>
-            Normal,
+            VOSNormal,
             /// <summary>
             /// Windows-Guest Account.
             /// </summary>
-            Guest,
+            VOSGuest,
             /// <summary>
             /// Windows-System Account.
             /// </summary>
-            System,
+            VOSSystem,
             /// <summary>
             /// Anonymous Account.
             /// </summary>
-            Anonymous
+            VOSAnonymous
         }
 
         /// <summary>
         /// Main Windows Memmbership, at newer Windows come more by.
         /// All in .NET Framework under NTAccounts, System.Security.Permission,
         /// </summary>
-        internal enum WindowsBuiltInRole
+        internal enum VOSWindowsBuiltInRole
         {
             /// <summary>
             /// ACHTUNG !:
@@ -727,50 +720,50 @@ namespace Visual.Operation.System.Base
 	    /// Administrator have full access on Computer, can be set.
             /// That's the Different to User!. Windows 10 Professional blocked Folders by Account User. No Access!
             /// </summary>
-            Administrator = 544,
+            VOSAdministrator = 544,
             
             /// <summary>
             ///  Benutzer werden daran gehindert, versehentliche oder absichtliche systemweite Änderungen vornehmen.
             ///  Benutzer können daher zertifizierte Anwendungen, jedoch nicht von den meisten Legacyanwendungen ausgeführt werden.
             ///  ACHTUNG ! Windows 10 behält sich vor hier einige Ordner zu schützen, kein Zugriff !.
             /// </summary>
-            User,
+            VOSUser,
             
             /// <summary>
             /// Gäste sind mehr eingeschränkt als Benutzer.
             /// </summary>
-            Guest,
+            VOSGuest,
             
             /// <summary>
             /// Hauptbenutzer verfügen die meisten administrative Berechtigungen mit einigen Einschränkungen.
             /// Daher können Hauptbenutzer Legacyanwendungen, zusätzlich zu den zertifizierten Anwendungen ausgeführt werden.
             /// </summary>
-            PowerUser,
+            VOSPowerUser,
             
             /// <summary>
             /// Kontooperatoren verwalten die Benutzerkonten auf einem Computer oder einer Domäne.
             /// </summary>
-            AccountOperator,
+            VOSAccountOperator,
             
             /// <summary>
             /// Systemoperatoren verwalten einen bestimmten Computer.
             /// </summary>
-            SystemOperator,
+            VOSSystemOperator,
             
             /// <summary>
             /// Druck-Operatoren können einen Drucker steuern.
             /// </summary>
-            PrintOperator,
+            VOSPrintOperator,
             
             /// <summary>
             /// Sicherungsoperatoren können Sicherheitsrichtlinien für den Zweck, sichern oder Wiederherstellen von Dateien überschreiben.
             /// </summary>
-            BackupOperator,
+            VOSBackupOperator,
 
             /// <summary>
             /// Replikationsdienste unterstützen die Dateireplikation in einer Domäne.
             /// </summary>
-            Replicator
+            VOSReplicatorOperator
         }
 
 
@@ -786,7 +779,8 @@ namespace Visual.Operation.System.Base
          --------------------------------------------------------------------*/
 		
         /// <summary>
-        /// Gibt eine Zeichenfolge zurück, die den Namen der .NET-Installation angibt, auf der eine App ausgeführt wird.
+        /// Returns a string specifying the name 
+	/// of the .NET installation on which an app is running.
         /// </summary>
         /// <!-- Author TIPPLIN 🧑-->
         /// 
@@ -803,7 +797,7 @@ namespace Visual.Operation.System.Base
         }
 
         /// <summary>
-        /// Gibt an, ob die aktuelle Anwendung auf der angegebenen Plattform ausgeführt wird.
+        /// Indicates whether the current application is running on the specified platform.
         /// </summary>
         /// <!-- Author TIPPLIN 🧑-->
         /// 
@@ -812,7 +806,7 @@ namespace Visual.Operation.System.Base
         /// 
         /// </remarks>
         /// <returns>
-        /// Eine Plattform.
+        /// Platform Windows
         /// </returns>
         public static string VOSGetPlatformName()
         {
@@ -820,7 +814,7 @@ namespace Visual.Operation.System.Base
         }
 
         /// <summary>
-        /// Ruft eine Zeichenfolge ab, die den Namen des Betriebssystems angibt, auf dem die App ausgeführt wird.
+        /// Gets a string that specifies the name of the operating system on which the app is running.
         /// </summary>
         /// <!-- Author TIPPLIN 🧑-->
         /// 
@@ -829,7 +823,7 @@ namespace Visual.Operation.System.Base
         /// 
         /// </remarks>
         /// <returns>
-        /// Der Name des Betriebssystems, auf dem die App ausgeführt wird.
+        /// The name of the operating system on which the app is running.
         /// </returns>
         public static string VOSGetOperationSystemName()
         {
@@ -837,7 +831,7 @@ namespace Visual.Operation.System.Base
         }
 
         /// <summary>
-        ///  Ruft die Prozessarchitektur einer aktuell ausgeführten App ab.
+        ///  Retrieves the process architecture of a currently running app.
         /// </summary>
         /// <!-- Author TIPPLIN 🧑-->
         /// 
@@ -846,10 +840,10 @@ namespace Visual.Operation.System.Base
         /// 
         /// </remarks>
         /// <returns>
-        /// X86 - Eine Intel-basierte 32-Bit-Prozessorarchitektur.
-        /// X64 - Eine Intel-basierte 64-Bit-Prozessorarchitektur.
-        /// ARM - Eine 32-Bit-ARM-Prozessorarchitektur.
-        /// ARM64 - Eine 64-Bit-ARM-Prozessorarchitektur.
+        /// X86 - Intel-based 32-Bit-Processor architecture.
+        /// X64 - Intel-based 64-Bit-Processor architecture.
+        /// ARM - 32-Bit-ARM-Processor architecture.
+        /// ARM64 - 64-Bit-ARM-Processor architecture.
         /// </returns>
         public static string VOSGetProcessorArchitectureName()
         {
@@ -858,6 +852,6 @@ namespace Visual.Operation.System.Base
         
 
         
-    } // end of class::VOSInternalBase
+    } // END::OF::CLASS::VOSInternalBase
 
-} // end of namespace:: Visual.Operation.System.Base
+} // END::OF::NAMESPACE:: Visual.Operation.System.Base
