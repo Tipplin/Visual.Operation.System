@@ -1,23 +1,23 @@
 ﻿
-
 //#############################################################################
 //
-// Project			:	Visual.Operation.System
+// Project	    :	Visual.Operation.Library
 //
 //#############################################################################
 //
 //-----------------------------------------------------------------------------
-// Programmer       :	Project-Founder and Main-Author Christian'TIPPLIN'Kurs
+// Programmer       :	Project-Founder and 
+//		            :	Main-Author Christian "TIPPLIN" Kurs
 //-----------------------------------------------------------------------------
-// Part				:	InternalException
+// Part		        :	NativeDLL - most written in C/C++
 //-----------------------------------------------------------------------------
-// Base Class       :	
+// Class            :	InternalVOSException
 //-----------------------------------------------------------------------------
 // Copyright © 2020
 // by  Visual Galaxy Framework Community Kernel Developer Team.
 //-----------------------------------------------------------------------------
-// by Head-Author: Christian "Tipplin" Kurs - Visual C# Developer
-// Portions Copyright © 2020 by Microsoft Corporation GmbH.
+// by Head-Author: Christian "TIPPLIN" Kurs - Visual C# Developer
+// Portions Copyright © 1982 - 2020 by Microsoft Corporation GmbH.
 //-----------------------------------------------------------------------------
 // Warning:
 // ----------------------------------------------------------------------------
@@ -62,10 +62,12 @@
 // © 1982 - 2020 Microsoft Corporation.All rights reserved.
 //-----------------------------------------------------------------------------
 
-// .NET Framework Directives - namespaces -
-// grayed directives not in use !
-//
-// That's is the .NET Base Assembly - all Types, Objects
+/*------------------------------------------------------------------------------
+ * System Directives - .NET Framework Assemblies - begins with System - here
+ * grayed are not in use, compiler remove them at build run.
+ *------------------------------------------------------------------------------
+*/
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -101,7 +103,7 @@ namespace Visual.Operation.System.InternalException
     {
         
 
-       
+       // Call and Methods are under construction
             
         
 
