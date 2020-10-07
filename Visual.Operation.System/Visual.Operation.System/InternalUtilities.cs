@@ -1,52 +1,73 @@
-﻿/*********************************************************************************
-*	Copyright © 2020 by VGF-KernelTeam and Christian 'TIPPLIN'🧑 Kurs.
-*			All Rights Reserved.
-*********************************************************************************/
-/*
-    This software is the confidential and proprietary information of
-    VGF-KernelTeam - ("Confidential Information").  You shall not
-    disclose such Confidential Information and shall use it only in
-    accordance with the terms of the License Agreement you entered into
-    with VGF-KernelTeam.
 
-    VGF-KERNELTEAM MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
-    THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-    PURPOSE, OR NON-INFRINGEMENT.
+//#############################################################################
+//
+// Project	    :	Visual.Operation.Library
+//
+//#############################################################################
+//
+//-----------------------------------------------------------------------------
+// Programmer       :	Project-Founder and 
+//		    :	Main-Author Christian "TIPPLIN" Kurs
+//-----------------------------------------------------------------------------
+// Part		    :	NativeDLL - most written in C/C++
+//-----------------------------------------------------------------------------
+// Base Class       :	VOSInternalBase
+//-----------------------------------------------------------------------------
+// Copyright © 2020
+// by  Visual Galaxy Framework Community Kernel Developer Team.
+//-----------------------------------------------------------------------------
+// by Head-Author: Christian "TIPPLIN" Kurs - Visual C# Developer
+// Portions Copyright © 1982 - 2020 by Microsoft Corporation GmbH.
+//-----------------------------------------------------------------------------
+// Warning:
+// ----------------------------------------------------------------------------
+// This product is licensed to you pursuant to the terms of the 
+// VGF license agreement included with the original software, and is
+// protected by copyright law and international treaties.Unauthorized
+// reproduction or distribution may result in severe civil and criminal
+// penalties, and will be prosecuted to the maximum extent possible under
+// the law.
+// You cannot distribute a compiled version 
+// of this code without prior registration.
+//-----------------------------------------------------------------------------
+// Please see the documentation supplied with
+// the VGF Libraries for further details.
+//
+// Authored by 
+// Copyright © 2020 by  Visual Galaxy Framework Community Kernel Developer Team
+// All Rights Reserved.
+// May be redistributed for free,
+// but may not be sold without the author's explicit permission
+//-----------------------------------------------------------------------------
+// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
+// You may only use this software if you are an authorized licensee
+// of an VGF developer tools product.
+//
+// This software is considered a Redistributable as defined under
+// the software license agreement that comes with the VGF Products
+// and is subject to that software license agreement.
+//
+//-----------------------------------------------------------------------------
+// Microsoft make Restrictions of Export for following Countries:
+// --------------------------------------------------------------
+// This software is subject to the U.S. Export Administration Regulations and 
+// other U.S.law, and may not be exported or re-exported to certain countries
+// (Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) 
+// or
+// to persons or entities prohibited from receiving U.S.exports
+// (including Denied Parties, Specially Designated Nationals,
+// and entities on the Bureau of Export Administration Entity List or
+// involved with missile technology or nuclear, chemical or biological weapons)
+//-----------------------------------------------------------------------------
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
+//-----------------------------------------------------------------------------
 
-    VGF-KERNELTEAM SHALL NOT BE LIABLE FOR ANY DAMAGES
-    SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
-    DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
-
-    Copyright_Version_1.0_BETA
-
-    This file is the same as x that comes with y,
-    except that the has been changed so that it is compilable
-    under more than just
+/*------------------------------------------------------------------------------
+ * System Directives - .NET Framework Assemblies - begins with System - here
+ * grayed are not in use, compiler remove them at build run.
+ *------------------------------------------------------------------------------
 */
 
-/**************************************************************************************************
-    -----------------------------------------------------------------------------------------------
-    🚩 Microsoft Export Restrictions 🚩 :
-    -----------------------------------------------------------------------------------------------
-    🚧 ! ATTENTION ! 🚧 write for Export 🚧 ! 
-    This software is subject to the U.S. Export Administration Regulations and 
-    other U.S. law, and may not be exported or re-exported to certain countries 
-    ( Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) or 
-    to persons or entities prohibited from receiving U.S. exports 
-    (including Denied Parties, Specially Designated Nationals, 
-    and entities on the Bureau of Export Administration Entity List or 
-    involved with missile technology or nuclear, chemical or biological weapons).
-
-    Copyright © 1982 - 2020 Microsoft Corporation. All rights reserved.
-
-****************************************************************************************************/
-
-/* 
- * All System or Windows Directives here:
- * 
- * 
-*/
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -154,7 +175,7 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         internal int BattLife => ps.BatteryFullLifetime;
 
         /// <summary>
-        /// Battery Life loading Accu in Percent
+        /// Battery Life loading Accu in % Percent
         /// </summary>
         internal float BattLifeP => ps.BatteryLifePercent;
 
@@ -279,8 +300,8 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// Counts Mouse Buttons
         /// </summary>
         /// <!-- Author TIPPLIN 🧑-->
-        /// Microsoft new Mouse is Multitasking capable, one mouse for Three Monitors only.
-        /// automatic detecting when Mouse move to other Monitor.
+        /// Microsoft ! NEW ! Mouse is Multitasking capable, one mouse for Three Monitors only.
+        /// automatic detecting when Mouse move to other Monitor !.
         /// <!-- Author TIPPLIN 🧑-->
         internal static int MouseButton => SystemInformation.MouseButtons;
 
@@ -310,60 +331,6 @@ namespace Visual.Operation.System.Internal.InternalUtilities
 
 
         #region ### Class Application from namespace System.Windows.Forms ###
-
-        /*
-         * Class Application have same Methods and Properties.
-         * by distributed work timed i/o Operations,
-         * allot to an CPU Thread, Microoft Tool:
-         * CPU 0 to CPU 63 checkbox
-         * !NOTE! Hand offs CPU 0, Operation System works here!
-         * Threads allot to CPU 1 to CPU 63
-         * So the Thread is running, but the User want close Application ?
-         * to forbid the close set:
-         * Application.QuitAllowed = false; // is a Property - bool -
-         * The User can't close Application !.
-         * Give Message to User: "The Work I/O Operation x is now running, you can't close Application... wait moment!"
-         * 
-         * Windows Operation System Function:
-         * ==================================
-         * SetAffinityMask(Thread, Mask);
-         * SetAffinityMask(currentThread, 0x2);
-         * Start Thread on CPU 2.
-         * Turbo Mode for rapid work is 3.
-         * 
-         * Create Jobs, batch-file, powershell script, .exe,
-         * Windows Operation System System Tool, command line tool:
-         * Start <job name>
-         * generally start jobs at afternoon/night ! for reports, backups...
-         * 
-         * Create powershellscript compiled as inline compilation 
-         * to powershellscriptname.exe with date/Time he runs,
-         * and take it in job batchfile.
-         * 
-         * --------------------------------------------------------------------
-         * Query Properties for Language, Culture.
-         * 
-         * ISO Organization
-         * 
-         * http://www.iso.org
-         * 
-         * Unicode Ogranization - .NET unicode is Version 13.0.0 
-         * Unicode 12.1 adds exactly one character, for a total of 137,929 characters. 
-         * Take in your Project only unicode !
-         * Windows Operation System in unicode / ansi written,
-         * Common Language Runtime written in unicode with UTF16 in/out.
-         * new website
-         * https://home.unicode.org/
-         * 
-         * 
-         * !NOTE! Visual C# Compiler change CharSet.Auto to CharSet.Ansi,
-         * so set CharSet.Unicode is better !.
-         * 
-         * Unicode Version 12.0 - 2019 - plus Handbook at Unicode Organization -
-         * Windows 10 - 2020 - emoji's, katemoji's with chat symbols and symbols Unicode 12
-         * 
-         */
-
 
         /// <summary>
         /// Get current Culturename languagecode2 country and regioncode2
@@ -475,9 +442,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// gd - instancevariable for Class Guid
         /// </summary>
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// general unique identify - GUID -
-        /// <!-- Author TIPPO -->
+        /// <!-- Author TIPPLIN 🧑-->
         /// <remarks>
         /// GUID's for Assembly, Operation System (Windows Vista to Windows 10),
         /// UUID's by Apple is the same.
@@ -501,7 +468,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// Message STYLES for our MessageBox, same as System.
         /// write Enumerator the same as in Visual Basic.NET,
         /// STYLES in intellsense Window - Style.enum-member
-        /// Style.OKOnlyButton | STYLES.Iconname | STYLES.SetForgroundWindow | STYLES.SystemModal
+        /// STYLES.OKOnlyButton | STYLES.Iconname | STYLES.SetForgroundWindow | STYLES.SystemModal
+        /// Use with Function VFLMsgBox("message", "title", STYLES.OKOnlyButton | STYLES.Iconname | STYLES.SetForgroundWindow | STYLES.SystemModal);
+        /// from our famous Library: Visual Function Library - VFL.dll
         /// </summary>
         /// <!-- Author TIPPLIN 🧑-->
         /// Initial enum by VB.NET as intellisense Window, 
@@ -733,14 +702,16 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         #region ### Assembly Information about Visual.Operation.System.Library ###
 
         /*
+        * Only for Assemblies written in .NET and .NET Languages
         * For more Information about Class VOSAssemblyInfo, see File AssemblyInfo.cs
-        * This Class is NOT standard !.
+        * This Class is 'NOT' standard !.
         */
         /// <summary>
         /// Get the Name of Assembly
         /// </summary>
         /// <!-- Author TIPPLIN 🧑-->
         /// use Class AssemblyInfo, what not normally in File AssemblyInfo.cs
+        /// vos is the instancevariable to Class VOSAssemblyInfo.
         /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// 
@@ -824,6 +795,9 @@ namespace Visual.Operation.System.Internal.InternalUtilities
         /// <summary>
         /// Is Older Operation System on current Computer
         /// </summary>
+        /// <!-- Author TIPPLIN 🧑-->
+        ///
+        /// <!-- Author TIPPLIN 🧑-->
         /// <returns>
         /// 
         /// </returns>
@@ -1005,6 +979,7 @@ namespace Visual.Operation.System.Internal.InternalUtilities
 
             vosmessage = "%s failed with error %d: %s" + Methodname + dw + sb.ToString();
             VFLMsgBox(vosmessage, "Method Error", STYLES.OkOnly | STYLES.Critical | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
+            
             return sb.ToString();
         }
 
@@ -1591,9 +1566,11 @@ namespace Visual.Operation.System.Internal.InternalUtilities
 
 
 
-    } // END OF Class::InternalUtilities
+    } // END::OF::CLASS::InternalUtilities
 
-} // END OF Namespace::InternalUtilities
+} // END OF::NAMESPACES::InternalUtilities
+/******************************************************************************/
+/********************** END::OF::FILE::InternalUltilites.cs *******************/
+/******************************************************************************/
 
-/********************** END OF FILE InternalUltilites.cs **********************/
 
