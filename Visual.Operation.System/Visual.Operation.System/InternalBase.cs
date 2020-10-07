@@ -6,7 +6,8 @@
 //#############################################################################
 //
 //-----------------------------------------------------------------------------
-// Programmer       :	Project-Founder and Main-Author Christian "TIPPO" Kurs
+// Programmer       :	Project-Founder and 
+//		    :	Main-Author Christian "TIPPLIN" Kurs
 //-----------------------------------------------------------------------------
 // Part		    :	NativeDLL - most written in C/C++
 //-----------------------------------------------------------------------------
@@ -685,7 +686,7 @@ namespace Visual.Operation.System.Base
 
 
         /// <summary>
-        ///  Gibt den Typ des Windows-Kontos verwendet.
+        ///  Specifies the type of Windows account that is being used.
         /// </summary>
         internal enum VOSWindowsAccountType
         {
@@ -714,54 +715,51 @@ namespace Visual.Operation.System.Base
         internal enum VOSWindowsBuiltInRole
         {
             /// <summary>
-            /// ACHTUNG !:
-            /// Administratoren haben vollständigen und uneingeschränkten Zugriff auf den Computer oder die Domäne.
-	    /// ----------------------=============-----=========================
+            /// ATTENTION !:
 	    /// Administrator have full access on Computer, can be set.
             /// That's the Different to User!. Windows 10 Professional blocked Folders by Account User. No Access!
             /// </summary>
             VOSAdministrator = 544,
             
             /// <summary>
-            ///  Benutzer werden daran gehindert, versehentliche oder absichtliche systemweite Änderungen vornehmen.
-            ///  Benutzer können daher zertifizierte Anwendungen, jedoch nicht von den meisten Legacyanwendungen ausgeführt werden.
-            ///  ACHTUNG ! Windows 10 behält sich vor hier einige Ordner zu schützen, kein Zugriff !.
-            /// </summary>
+            /// Users are prevented from making accidental or intentional system-wide changes.
+            /// Users can therefore run certified applications, but not most legacy applications.
+            ///  DANGER ! Windows 10 reserves the right to protect some folders here, no access!
             VOSUser,
             
             /// <summary>
-            /// Gäste sind mehr eingeschränkt als Benutzer.
+            /// Guests are more restricted than users.
             /// </summary>
             VOSGuest,
             
             /// <summary>
-            /// Hauptbenutzer verfügen die meisten administrative Berechtigungen mit einigen Einschränkungen.
-            /// Daher können Hauptbenutzer Legacyanwendungen, zusätzlich zu den zertifizierten Anwendungen ausgeführt werden.
+            /// Power users have most administrative privileges with some restrictions.
+            /// Power users can therefore run legacy applications in addition to the certified applications.
             /// </summary>
             VOSPowerUser,
             
             /// <summary>
-            /// Kontooperatoren verwalten die Benutzerkonten auf einem Computer oder einer Domäne.
+            /// Account operators manage user accounts on a computer or domain.
             /// </summary>
             VOSAccountOperator,
             
             /// <summary>
-            /// Systemoperatoren verwalten einen bestimmten Computer.
+            /// System operators manage a particular computer.
             /// </summary>
             VOSSystemOperator,
             
             /// <summary>
-            /// Druck-Operatoren können einen Drucker steuern.
+            /// Print operators can control a printer.
             /// </summary>
             VOSPrintOperator,
             
             /// <summary>
-            /// Sicherungsoperatoren können Sicherheitsrichtlinien für den Zweck, sichern oder Wiederherstellen von Dateien überschreiben.
+            /// Backup operators can override security policies for the purpose of backing up or restoring files.
             /// </summary>
             VOSBackupOperator,
 
             /// <summary>
-            /// Replikationsdienste unterstützen die Dateireplikation in einer Domäne.
+            /// Replication services support file replication in a domain.
             /// </summary>
             VOSReplicatorOperator
         }
