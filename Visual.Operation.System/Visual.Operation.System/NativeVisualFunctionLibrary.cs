@@ -1,55 +1,75 @@
-﻿/*********************************************************************************
-*	Copyright © 2020 by VGF-KernelTeam and Christian 'TIPPLIN' Kurs.
-*			All Rights Reserved.
-*
-*   Parts of Copyright by Microsoft Corporation with Permission.
-*   Many Thanks for this Help !
-* 
-*--------------------------------------------------------------------------------
-*
-* 
-*********************************************************************************/
-/*
-    This software is the confidential and proprietary information of
-    VGF-KernelTeam - ("Confidential Information").  You shall not
-    disclose such Confidential Information and shall use it only in
-    accordance with the terms of the License Agreement you entered into
-    with VGF-KernelTeam.
 
-    VGF-KERNELTEAM MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF
-    THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-    PURPOSE, OR NON-INFRINGEMENT.
+//#############################################################################
+//
+// Project	    :	Visual.Operation.Library
+//
+//#############################################################################
+//
+//-----------------------------------------------------------------------------
+// Programmer       :	Project-Founder and 
+//		            :	Main-Author Christian "TIPPLIN" Kurs
+//-----------------------------------------------------------------------------
+// Part		        :	NativeDLL - most written in C/C++
+//-----------------------------------------------------------------------------
+// Base Class       :	VOSSafeNativeVisualFunctionLibrary
+//-----------------------------------------------------------------------------
+// Copyright © 2020
+// by  Visual Galaxy Framework Community Kernel Developer Team.
+//-----------------------------------------------------------------------------
+// by Head-Author: Christian "TIPPLIN" Kurs - Visual C# Developer
+// Portions Copyright © 1982 - 2020 by Microsoft Corporation GmbH.
+//-----------------------------------------------------------------------------
+// Warning:
+// ----------------------------------------------------------------------------
+// This product is licensed to you pursuant to the terms of the 
+// VGF license agreement included with the original software, and is
+// protected by copyright law and international treaties.Unauthorized
+// reproduction or distribution may result in severe civil and criminal
+// penalties, and will be prosecuted to the maximum extent possible under
+// the law.
+// You cannot distribute a compiled version 
+// of this code without prior registration.
+//-----------------------------------------------------------------------------
+// Please see the documentation supplied with
+// the VGF Libraries for further details.
+//
+// Authored by 
+// Copyright © 2020 by  Visual Galaxy Framework Community Kernel Developer Team
+// All Rights Reserved.
+// May be redistributed for free,
+// but may not be sold without the author's explicit permission
+//-----------------------------------------------------------------------------
+// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
+// You may only use this software if you are an authorized licensee
+// of an VGF developer tools product.
+//
+// This software is considered a Redistributable as defined under
+// the software license agreement that comes with the VGF Products
+// and is subject to that software license agreement.
+//
+//-----------------------------------------------------------------------------
+// Microsoft make Restrictions of Export for following Countries:
+// --------------------------------------------------------------
+// This software is subject to the U.S. Export Administration Regulations and 
+// other U.S.law, and may not be exported or re-exported to certain countries
+// (Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) 
+// or
+// to persons or entities prohibited from receiving U.S.exports
+// (including Denied Parties, Specially Designated Nationals,
+// and entities on the Bureau of Export Administration Entity List or
+// involved with missile technology or nuclear, chemical or biological weapons)
+//-----------------------------------------------------------------------------
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
+//-----------------------------------------------------------------------------
 
-    VGF-KERNELTEAM SHALL NOT BE LIABLE FOR ANY DAMAGES
-    SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
-    DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
-
-    Copyright_Version_1.0_BETA
-
-    This file is the same as x that comes with y,
-    except that the has been changed so that it is compilable
-    under more than just
+/*------------------------------------------------------------------------------
+ * System Directives - .NET Framework Assemblies - begins with System - here
+ * grayed are not in use, compiler remove them at build run.
+ *------------------------------------------------------------------------------
 */
 
-/**************************************************************************************************
-    ! ATTENTION ! write for Export ! 
-    This software is subject to the U.S. Export Administration Regulations and 
-    other U.S. law, and may not be exported or re-exported to certain countries 
-    ( Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) or 
-    to persons or entities prohibited from receiving U.S. exports 
-    (including Denied Parties, Specially Designated Nationals, 
-    and entities on the Bureau of Export Administration Entity List or 
-    involved with missile technology or nuclear, chemical or biological weapons).
 
-    © 1982 - 2020 Microsoft Corporation. All rights reserved.
 
-****************************************************************************************************/
-
-/*-----------------------------------------------------------------------------
- * All Directives of .NET Framework - All Begins with System.
- *
- *---------------------------------------------------------------------------*/ 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -119,7 +139,7 @@ namespace Visual.Function.Library
     /// paper from Dr. Knittel (CBM) for German Umlauts written in German and English.
     /// NOTE: Common Language Runtime works IN/OUT with UTF16.
     /// <!--Author Tipplin -->
-    public static class NativeVisualFunctionLibrary
+    public static class VOSSafeNativeVisualFunctionLibrary
     {
 
         #region ### Visual.Function.Library Dll - our famous C Functions Library ###
