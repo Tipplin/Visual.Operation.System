@@ -1,122 +1,73 @@
-﻿/******************************************************************************
-*	Copyright © 2020 by VGF-KernelTeam and Christian 'TIPPLIN' Kurs.
-*                      All Rights Reserved.
-* 
-******************************************************************************/
 
-/* ----------------------------------------------------------------------------
- * ----------------------------------------------------------------------------
- * Visual.Operation.System.dll
- * Maintainer: Christian 'TIPPLIN' Kurs - 
- * Visual C#, C++ Developer and .NET Nerd.
- * 
- * ----------------------------------------------------------------------------
- * Copyright © 2020
- * ----------------------------------------------------------------------------
- *
- * ----------------------------------------------------------------------------
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the 
- * along with this program.  If not, see 
- * ----------------------------------------------------------------------------
- * 
- * 
- * ----------------------------------------------------------------------------
- */
+//#############################################################################
+//
+// Project	    :	Visual.Operation.Library
+//
+//#############################################################################
+//
+//-----------------------------------------------------------------------------
+// Programmer       :	Project-Founder and 
+//		            :	Main-Author Christian "TIPPLIN" Kurs
+//-----------------------------------------------------------------------------
+// Part		        :	NativeDLL - most written in C/C++
+//-----------------------------------------------------------------------------
+// Base Class       :	VOSInternalOSMethods
+//-----------------------------------------------------------------------------
+// Copyright © 2020
+// by  Visual Galaxy Framework Community Kernel Developer Team.
+//-----------------------------------------------------------------------------
+// by Head-Author: Christian "TIPPLIN" Kurs - Visual C# Developer
+// Portions Copyright © 1982 - 2020 by Microsoft Corporation GmbH.
+//-----------------------------------------------------------------------------
+// Warning:
+// ----------------------------------------------------------------------------
+// This product is licensed to you pursuant to the terms of the 
+// VGF license agreement included with the original software, and is
+// protected by copyright law and international treaties.Unauthorized
+// reproduction or distribution may result in severe civil and criminal
+// penalties, and will be prosecuted to the maximum extent possible under
+// the law.
+// You cannot distribute a compiled version 
+// of this code without prior registration.
+//-----------------------------------------------------------------------------
+// Please see the documentation supplied with
+// the VGF Libraries for further details.
+//
+// Authored by 
+// Copyright © 2020 by  Visual Galaxy Framework Community Kernel Developer Team
+// All Rights Reserved.
+// May be redistributed for free,
+// but may not be sold without the author's explicit permission
+//-----------------------------------------------------------------------------
+// This software is Copyright © 2020 by VGF-Technologies at VGF-KernelTeam
+// You may only use this software if you are an authorized licensee
+// of an VGF developer tools product.
+//
+// This software is considered a Redistributable as defined under
+// the software license agreement that comes with the VGF Products
+// and is subject to that software license agreement.
+//
+//-----------------------------------------------------------------------------
+// Microsoft make Restrictions of Export for following Countries:
+// --------------------------------------------------------------
+// This software is subject to the U.S. Export Administration Regulations and 
+// other U.S.law, and may not be exported or re-exported to certain countries
+// (Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) 
+// or
+// to persons or entities prohibited from receiving U.S.exports
+// (including Denied Parties, Specially Designated Nationals,
+// and entities on the Bureau of Export Administration Entity List or
+// involved with missile technology or nuclear, chemical or biological weapons)
+//-----------------------------------------------------------------------------
+// © 1982 - 2020 Microsoft Corporation.All rights reserved.
+//-----------------------------------------------------------------------------
 
-
-// /** in Visual C# not allowed ! more then two asterics  :)
-
-// Insert EMOJI in your Code bzw. Commentblock  🖥 here all emoji's uni color, in Office in Multi Color
-
-
-
-/* insert emoji's with Screen - Tastatur 👩‍🦰 - 💥💫💘💓 right mouse click on taskbar, 
- * window Screemtastatur show, right on Taskbar show the sign, click it!
- * emoji's show with click smile face, choice an emoji and 
- * click it then he insert in document or here in commentblock. 😜
- */
-
-/*** <!-- ⚠ **WARNING** -->
+/*------------------------------------------------------------------------------
+ * System Directives - .NET Framework Assemblies - begins with System - here
+ * grayed are not in use, compiler remove them at build run.
+ *------------------------------------------------------------------------------
 */
 
-/*** <!-- 👉 **NOTE** -->
- */
-
-/*** <!-- ❌ **Crictical** -->
- */
-
-/*** <!-- ❗ **ATTENTION** -->
- */
-
-/*** <!-- ❔ **QUESTION** -->
- */
-
-/*** <!-- 👁‍🗨 **FOR YOUR EYES ONLY ! -->
-*/
-
-/*** <!--  ✅ **OK** Ready for use ! -->
- */
-
-
-
-
-/*** 🚩🏴‍☠️☢🔚🗽🛠🔧⚔👀 ⚡ 👌🗓📌📍 © ® ™
- */
-
-
-
-
-
-
-
-/*-----------------------------------------------------------------------------
-    This software is the confidential and proprietary information of
-    VGF-KernelTeam - ("Confidential Information").  You shall not
-    disclose such Confidential Information and shall use it only in
-    accordance with the terms of the License Agreement you entered into
-    with VGF-KernelTeam.
-
-    VGF-KERNELTEAM MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY 
-    OF
-    THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-    PURPOSE, OR NON-INFRINGEMENT.
-
-    VGF-KERNELTEAM SHALL NOT BE LIABLE FOR ANY DAMAGES
-    SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR
-    DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
-
-    Copyright_Version_1.0_BETA
-
-    This file is the same as x that comes with y,
-    except that the has been changed so that it is compilable
-    under more than just
-*/
-
-
- /*
- * ----------------------------------------------------------------------------
- * *** ATTENTION *** write for Export !
- * 
- * This software is subject to the U.S. Export Administration Regulations and
- * other U.S. law, and may not be exported or re-exported to certain countries
- * ( Cuba, Iran, North Korea, Sudan, Syria, and the Crimea region of Ukraine) 
- * or 
- * to persons or entities prohibited from receiving U.S. exports
- * (including Denied Parties, Specially Designated Nationals,
- * and entities on the Bureau of Export Administration Entity List or
- * involved with missile technology or nuclear, chemical or biological weapons).
- *
- * © 1982 - 2020 by Microsoft Corporation. All rights reserved.
- * 
- * ***************************************************************************/
-
-// That's is the .NET Base Assembly - all Types, Objects
 using System;
 using System.IO;
 
@@ -189,18 +140,15 @@ namespace Visual.Operation.System.Internal
     /// <summary>
     /// class InternalOSMethods
     /// </summary>
-    /// <!-- Author TIPPO -->
-    /// E-mail-Adress:
-    /// 
-    /// Community Website TIPPO:
-    /// http://www.vgfc.org/Tippo
-    /// 
+    /// <!-- Author TIPPLIN 🧑-->
+    ///
+    /// <!-- AUthor TIPPLIN 🧑-->
     /// <remarks>
     /// !NOTE! private have now, degree of protection
     /// return is the last in method, after return standing code is not execute!
     /// return -dev slang- jump out!
     /// </remarks>
-    public static class InternalOSMethods
+    public static class VOSInternalOSMethods
     {
 
         /**********************************************************************
@@ -224,15 +172,16 @@ namespace Visual.Operation.System.Internal
          * XML-Commentary-Block you can set this or other comments: 
          * (same in JavaScript comment)
          * 
-         * <!-- Author TIPPO -->
+         * <!-- Author TIPPLIN 🧑-->
          * 
-         * <!-- Author TIPPO -->
+         * <!-- Author TIPPLIN 🧑-->
          * 
          * take message to me with:
          * E-mail-Adress:
+         *
          * https://kurschristian@gmail.com
          * 
-         * Community Website TIPPO:
+         * Community Website TIPPLIN:
          * in work
          * 
          * 
@@ -272,7 +221,8 @@ namespace Visual.Operation.System.Internal
 
                 VFLMsgBox(vosmessage, "General Information of Visual.Operation.System.dll", STYLES.OkOnly | STYLES.Exclamation | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
                 Beep(5000, 2000);
-
+                
+                // EXIT_CODES is an enumerator for all Error types.
                 // 1150 is The specifies program requires a newer Version of Windows Operation System.
                 // ERROR_OLD_WIN_VERSION from WinError.h - C/C++ Headerfile
                 NRMExit(EXIT_CODES.ERROR_OLD_WIN_VERSION);
@@ -297,7 +247,7 @@ namespace Visual.Operation.System.Internal
             vosmessage += "All Rights Reserved.\n";
             vosmessage += "Portions © 2018 by Microsoft Corporation. All rights reserved.\n";
 
-            // MessageBox from Visual Function Library written in C.
+            // MessageBox from external Visual Function Library - VFL.dll - written in C/C++.
             // enumerator STYLES like VB.NET - Button, Icon, System, Modal
             VFLMsgBox(vosmessage, "Visual Operation System", STYLES.OkOnly | STYLES.Information | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
 
@@ -768,7 +718,123 @@ namespace Visual.Operation.System.Internal
             }
 
         } // END of Method::VOSIsWIndows10Build18362.10000
+        
+        /// <summary>
+        ///  Windows 10 - 2020 - 20H1 - 2004 -
+        ///  Check Windows 10 Version, is OS-Build 19041 and Revision 
+        ///  27.05.2020
+        /// </summary>
+        /// <!-- Author TIPPLIN 🧑-->
+        /// 
+        /// <!-- Author TIPPLIN 🧑-->
+        /// <remarks>
+        /// Microsoft Right, increment the Revisionnumber by updates.
+        /// Microsoft increment automatic Revisionnumber by Bugsfixes, Security Fixes by cumulative update.
+        /// change UBR in Registry automatic.
+        /// 
+        /// 
+        /// </remarks>
+        /// <returns>
+        /// Windows 10 May Update 2020 first update
+        /// </returns>
+        public static bool VOSIsWindows10_OSBuild_19041_Revision_1()
+        {
 
+
+            /*
+             * Visual Studio 2017 - class Enviroment
+             * Version.Major, Version.Minor, Version.Build, Version.Revision
+             * MajorRevision, MinorRevision don't use it !
+             * 
+             * NEW Microsoft Improvements for better runtime tuning
+             * (Environment.Version.Major >= 10) Compiler check first!
+             * 
+             * Registry Key for Operation System .Revision
+             * is Registry Key UBR:
+             * 
+             */
+
+            // Get Value from Registry Key UBR for Revisionnmuber
+            object releaseKeyAsObject = ndpKey.GetValue("UBR");
+
+            int releaseKey = Convert.ToInt32(releaseKeyAsObject);
+            if (releaseKey == 1 || releaseKey > 1)
+            {
+
+                vosmessage = "This Version is Windows 10 - 20h1 - OS-Build 19041 and Revision 1\n";
+                vosmessage += "or higher as Revision 1.\n";
+                vosmessage += "Update: 27.05.2020\n";
+
+                VFLMsgBox(vosmessage, "Check  Windows Operation System Version", STYLES.OkOnly | STYLES.Information | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
+                return true;
+            }
+            else
+            {
+                VFLMsgBox("This Version is NOT Windows 10 OS-Build 19041 and Revision 1", "Check Windows Operation System Version", STYLES.OkOnly | STYLES.Critical | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
+                return false;
+            }
+
+        } // END of Method::VOSIsWIndows10Build19041.1
+        
+        /// <summary>
+        ///  Check Windows 10 Version, is OS-Build 19042 and Revision 
+        ///  skip into second half year release begin by Revision .
+        /// </summary>
+        /// <!-- Author TIPPLIN 🧑-->
+        /// Microsoft skip Revision to 1 by 20h2 - to OS-Build 19042.1
+        /// <!-- Author TIPPLIN 🧑-->
+        /// <remarks>
+        /// Microsoft Right, increment the Revisionnumber by updates.
+        /// Microsoft increment automatic Revisionnumber by Bugsfixes, Security Fixes by cumulative update.
+        /// change UBR in Registry automatic.
+        /// at Time Revision 25.10.2020 by .
+        /// 
+        /// </remarks>
+        /// <returns>
+        /// Windows 10 October Update 2020 second revision
+        /// </returns>
+        public static bool VOSIsWindows10_OSBuild_19042_Revision_1()
+        {
+
+
+            /*
+             * Visual Studio 2017 - class Enviroment
+             * Version.Major, Version.Minor, Version.Build, Version.Revision
+             * MajorRevision, MinorRevision don't use it !
+             * 
+             * NEW Microsoft Improvements for better runtime tuning
+             * (Environment.Version.Major >= 10) Compiler check first!
+             * 
+             * Registry Key for Operation System .Revision
+             * is Registry Key UBR:
+             * 
+             */
+
+            // Get Value from Registry Key UBR for Revisionnmuber
+            object releaseKeyAsObject = ndpKey.GetValue("UBR");
+
+            int releaseKey = Convert.ToInt32(releaseKeyAsObject);
+            if (releaseKey == 1 || releaseKey > 1)
+            {
+
+                vosmessage = "This Version is Windows 10 - 20h2 - OS-Build 19042 and Revision 1\n";
+                vosmessage += "or higher as Revision 1.\n";
+                vosmessage += "Update: 25.10.2020\n";
+
+                VFLMsgBox(vosmessage, "Check  Windows Operation System Version", STYLES.OkOnly | STYLES.Information | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
+                return true;
+            }
+            else
+            {
+                VFLMsgBox("This Version is NOT Windows 10 OS-Build 19042 and Revision 1", "Check Windows Operation System Version", STYLES.OkOnly | STYLES.Critical | STYLES.MsgBoxSetForeground | STYLES.SystemModal);
+                return false;
+            }
+
+        } // END of Method::VOSIsWIndows10Build19042.1
+        
+        
+        
+        
         /// <summary>
         ///  Check Windows 10 Version, is now OS-Build 18865
         ///  First Build for Windows 10 - 20H1 - 2020
@@ -964,7 +1030,7 @@ namespace Visual.Operation.System.Internal
             string vosmessage1 = "© Visual.Operation.System.dll";
 
             vosmessage = "Info about Copyright Assembly Visual.Operation.Library.dll\n\n";
-            vosmessage += "Copyright © 2019  by VGF-Community KernelTeam and Christian 'Tipplin' 🐻 Kurs\n";
+            vosmessage += "Copyright © 2019  by VGF-Community KernelTeam and Christian 'TIPPLIN' 🐻 Kurs\n";
             vosmessage += "Portions © 1982 - 2019 Microsoft Corporation. All rights reserved.\n";
             //
             // VFLMsgBox from Visual.Function.Library, wrapper written C/C++ from Windows Operation System API
@@ -978,16 +1044,7 @@ namespace Visual.Operation.System.Internal
 
 
 
-
-
-
-
-
-
-
-
-    } // END::OF::CLASS::InternalOSMethods
-    
+    } // END::OF::CLASS::InternalOSMethods    
 } // END::OF::NAMESPACE::Visual.Operation.System.Internal
 
 /*****************************************************************************/
