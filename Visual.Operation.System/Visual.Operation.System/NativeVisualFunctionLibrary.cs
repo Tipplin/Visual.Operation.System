@@ -241,7 +241,7 @@ namespace Visual.Function.Library
                                                // LPWSTR (wchar_t) must be marshalling, by LPSTR can set string directly.
                                                [MarshalAs(UnmanagedType.LPWStr)]
                                                string lpszTitel,
-                                               // Enumerator like VB for C#, show in Method as Parameter at .point, than a intellisense Window.
+                                               // Own Enumerator like VB for C#, show in Method as Parameter at .point, than a intellisense Window.
                                                STYLES styles);
 
         /// <summary>
